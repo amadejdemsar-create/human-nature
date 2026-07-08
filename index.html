@@ -929,10 +929,25 @@ section.tight {
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto; }
 }
+
+/* LANGUAGE TOGGLE */
+.lang-toggle{position:fixed;top:18px;right:18px;z-index:1000;display:flex;gap:2px;background:rgba(15,13,24,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--border-bright);border-radius:100px;padding:4px;}
+.lang-toggle button{font-family:'Inter',system-ui,sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text-dim);background:transparent;border:none;border-radius:100px;padding:6px 13px;cursor:pointer;transition:color .2s ease,background .2s ease;}
+.lang-toggle button.active{color:var(--bg-deep);background:var(--accent);}
+.lang-toggle button:not(.active):hover{color:var(--text);}
+[data-lang-layer]{display:none;}
+[data-lang-layer].active{display:block;}
+@media (max-width:420px){.lang-toggle{top:12px;right:12px;}.lang-toggle button{padding:5px 11px;font-size:11px;}}
 </style>
 </head>
 <body>
 
+<div class="lang-toggle" role="group" aria-label="Language / Jezik">
+  <button type="button" data-l="en" class="active">EN</button>
+  <button type="button" data-l="sl">SL</button>
+</div>
+
+<div data-lang-layer="en" class="active">
 <!-- ===================== HERO ===================== -->
 <section class="hero">
   <div class="hero-inner">
@@ -1691,6 +1706,786 @@ section.tight {
 <footer class="footer">
   Generated from <a href="./index.md">Context/Knowledge/topics/humanity/human-nature/</a> &nbsp;&middot;&nbsp; 16. 5. 2026
 </footer>
+</div>
+<div data-lang-layer="sl">
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">Vodnik iz prvih principov</div>
+    <h1 class="hero-title">
+      Človeška narava, <em>od prvih ljudi</em> do tega trenutka.
+    </h1>
+    <p class="hero-subtitle">
+      Sprehod skozi 3,5 milijarde let evolucije, 300.000 let vrste Homo sapiens in tisto peščico gonov ter vzorcev, ki še vedno poganjajo vsakega človeka, ki ga boste kdaj srečali, tudi tistega, ki bere te vrstice.
+    </p>
+    <div class="hero-meta">
+      <span><span class="dot"></span>8 poglavij</span>
+      <span><span class="dot"></span>~26.000 besed, strnjenih</span>
+      <span><span class="dot"></span>Posodobljeno 16. 5. 2026</span>
+    </div>
+  </div>
+  <div class="hero-scroll">Podrsajte za začetek</div>
+</section>
 
+<div class="divider"></div>
+
+<!-- ===================== THE THIRTY SECOND VERSION ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">Različica v tridesetih sekundah</span>
+    <h2 class="section-title">Če preberete <em>eno samo</em> stvar.</h2>
+    <p class="section-lead">
+      Strnjen odstavek, ki vsebuje celoten model. Vse drugo na tej strani so dokazi, struktura in uporaba tega, kar sledi.
+    </p>
+
+    <div class="big-idea">
+      <div class="big-idea-label">Model</div>
+      <p class="big-idea-text">
+        Ljudje smo <strong>biološki organizmi</strong>, ki jih je oblikovalo 3,5 milijarde let evolucije in dokončno izpililo za lovsko-nabiralniško življenje v pleistocenu, danes pa živimo v okoljih, ki so se spremenila hitreje, kot jim evolucija zmore slediti. Poganja nas peščica <strong>univerzalnih gonov</strong> (preživetje, razmnoževanje, status, pripadnost, smisel, razumevanje, avtonomija, udobje) znotraj možganov, katerih starejše čustvene plasti so hitrejše in močnejše od mlajše razumske. Sodelujemo v velikem obsegu tako, da si delimo <strong>izmišljene resničnosti</strong>: denar, bogove, narode, znamke, zakone. Neujemanje med našo naravo in našim okoljem poraja večino sodobnih motenj, velik del pa je mogoče odpraviti tako, da spremenimo vhodne podatke, namesto da bi se borili proti biologiji.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== FIVE CORE CLAIMS ===================== -->
+<section>
+  <div class="container">
+    <span class="section-label">Pet temeljnih trditev</span>
+    <h2 class="section-title">Celoten dokument v <em>petih stavkih</em>.</h2>
+    <p class="section-lead">
+      Če je zgornji odstavek predolg, je tu pet trditev, ki jih lahko nosite v glavi. Vsaka od njih je v izvorniku razdelana v celotnem poglavju.
+    </p>
+
+    <div class="card-grid three" style="margin-bottom: 24px;">
+      <div class="card">
+        <span class="card-number">01</span>
+        <h3 class="card-title">Ste pleistocenski primat.</h3>
+        <p class="card-body">Vaše telo in um sta bila dokončno izpiljena za drugačen svet. Skoraj vsak refleks, ki ga premorete, je umerjen po tistem svetu, ne po tem. Vaši geni za telesno pripravljenost, vaša tesnoba glede statusa, vaša plemenska zvestoba, vaše poželenje. Vse to so pleistocenske privzete nastavitve, ki tečejo na vhodnih podatkih 21. stoletja.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">02</span>
+        <h3 class="card-title">Status je gospodujoči gon, ki ga večina odraslih ne prizna.</h3>
+        <p class="card-body">Velik del vedenja, tudi tistega, ki se šopiri kot načelo, je tekmovanje za status. Večina tega, kar je videti kot ideologija ali preferenca, je preoblečeno prizadevanje za položaj. Če ga poimenujete, vas neha voditi.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">03</span>
+        <h3 class="card-title">Sodelovanje v velikem obsegu terja skupne fikcije.</h3>
+        <p class="card-body">Denar, znamke, narodi, zakoni. To niso laži. So tehnologija, ki neznancem omogoča sodelovanje. Delujejo, dokler vanje verjame dovolj ljudi. Civilizacija je krhka, ker je njen operacijski sistem verovanje.</p>
+      </div>
+    </div>
+
+    <div class="card-grid two">
+      <div class="card">
+        <span class="card-number">04</span>
+        <h3 class="card-title">Večina motenj je neujemanje.</h3>
+        <p class="card-body">Z organizmom je vse v redu, narobe so vhodni podatki. Večina sodobnih težav (debelost, tesnoba, depresija, osamljenost, raztresenost, polarizacija) so dobro delujoči prednamski sistemi, ki se pravilno odzivajo na vhodne podatke, za katere niso bili zgrajeni. Spremenite vhodne podatke in večina kroničnih sodobnih težav se omili.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">05</span>
+        <h3 class="card-title">Dobro življenje ni privzeta nastavitev.</h3>
+        <p class="card-body">Zgraditi ga je treba premišljeno, proti starodavnim gonom, ki se ne prilegajo več, in proti sodobnim okoljem, ki jih izkoriščajo. Biologija razcveta ne bo prinesla po naključju. Okolje ga ne bo prineslo samo od sebe. Potrebno je zavestno sodelovanje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUOTE 1 ===================== -->
+<div class="container-narrow">
+  <div class="quote-block">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">Vsi goni, nagoni, čustva in preference, kar jih človek premore, so bili izbrani zato, ker so v nekdanjih okoljih izboljševali uspešnost razmnoževanja, ne pa zato, da bi bil človek v sedanjosti srečen ali moder.</p>
+    <div class="quote-cite">Iz 2. poglavja. Strojna oprema</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ===================== HARDWARE / BRAIN ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">Strojna oprema</span>
+    <h2 class="section-title">Možgani, zgrajeni v <em>plasteh</em>, ne od začetka.</h2>
+    <p class="section-lead">
+      Evolucija je konservativna. Gradi na tem, kar že obstaja, namesto da bi začenjala znova. Vaši možgani so sklad sistemov, dodajanih skozi več sto milijonov let, kjer novejše funkcije tečejo na starejši infrastrukturi. Kadar se stepeta »kaj bi moral storiti« in »kaj si želim storiti«, običajno čutite prav ta sklad.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="card-grid three">
+      <div class="card">
+        <span class="card-tag tag-bio">Najstarejša plast</span>
+        <h3 class="card-title">Možgansko deblo</h3>
+        <p class="card-body">Srčni utrip. Dihanje. Telesna temperatura. Cikli spanja. Refleksi. Delimo ga s plazilci in ribami. Teče brez vas. Zavestno ga ne morete preglasiti, razen v zelo ozkih oknih.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag tag-mind">Srednja plast</span>
+        <h3 class="card-title">Limbični sistem</h3>
+        <p class="card-body">Amigdala, hipokampus, hipotalamus, bazalni gangliji. Delimo ga s sesalci. Poraja čustva: strah, jezo, privlačnost, gnus, veselje. Hitrejši je od misli. Večina »trebušnih odzivov« se zgodi tu, pod ravnijo zavedanja.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag tag-social">Najmlajša plast</span>
+        <h3 class="card-title">Skorja</h3>
+        <p class="card-body">Razum, jezik, načrtovanje, modeliranje družbenih odnosov, samorefleksija. Zlasti prefrontalna skorja, za vašim čelom. Do 25. leta ni povsem mielinizirana. V spopadu je manj močna, kot ljudje domnevajo.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">Ključna asimetrija</div>
+      <p class="callout-body">Limbični sistem ima več povezav, ki segajo <em>navzgor</em> v skorjo, kot jih ima skorja, ki segajo <em>navzdol</em>. Čustvo bolj vpliva na razum kot razum na čustvo. To je značilnost zasnove, ne napaka. Prav zato je tudi sila volje nezanesljiva: pod stresom, ob pomanjkanju spanja ali lakoti prefrontalno delovanje upade in vajeti prevzamejo starejši sistemi.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== TIMELINE / HISTORY ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">Zgodba</span>
+    <h2 class="section-title">300.000 let vrste <em>Homo sapiens</em>, v faznih prehodih.</h2>
+    <p class="section-lead">
+      Vsak fazni prehod je spremenil pogoje človeškega življenja dovolj, da je bilo vse, kar mu je sledilo, drugačno. Biologija se ni kaj dosti spreminjala. Okolje se je. Večina naših današnjih težav izvira iz vrzeli, ki se je odprla med njima.
+    </p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">Pred 7 milijoni let</div>
+        <h4 class="timeline-title">Ločitev od šimpanzov</h4>
+        <p class="timeline-body">Človeška veja se razide s šimpanzovsko. Nobenega enega samega »prvega človeka« ni. Sledi veriga hominidnih vrst: Australopithecus, Homo habilis, Homo erectus. Možgani rastejo. Pojavijo se orodja. Ogenj ukrotijo približno pred milijonom let.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">Pred 300.000 leti</div>
+        <h4 class="timeline-title">Pojavi se Homo sapiens</h4>
+        <p class="timeline-body">Vzniknemo v Afriki. Smo ena od <strong>več človeških vrst</strong> na planetu, med njimi so neandertalci in denisovci. 230.000 let ne kažemo nobene očitne kognitivne premoči.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">Pred ~70.000 leti</div>
+        <h4 class="timeline-title">Kognitivna revolucija</h4>
+        <p class="timeline-body">Nenaden razcvet umetnosti, okrasja, izpiljenih orodij, trgovine na dolge razdalje. Jezik pridobi zmožnost sklicevanja na abstrakcije in fikcije. Pridobimo tehnologijo <strong>skupnih namišljenih resničnosti</strong>, ki nam omogoča sodelovanje v skupinah, večjih od ~150. Druge človeške vrste te zmožnosti nimajo. V nekaj deset tisoč letih jih ni več.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">Pred 70.000 do 12.000 leti</div>
+        <h4 class="timeline-title">Lovsko-nabiralniško življenje</h4>
+        <p class="timeline-body">Majhne skupine 30 do 50 ljudi, plemenske mreže po ~150. Znotraj skupin razmeroma enakopravni. Status prislužen s spretnostjo. Animistični svetovni nazor, obredje, ustno pripovedništvo. <strong>To je svet, za katerega je bila uglašena naša psihologija.</strong> Še vedno smo isti ljudje, le v drugačni stavbi.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">Pred 12.000 leti</div>
+        <h4 class="timeline-title">Agrarna revolucija</h4>
+        <p class="timeline-body">Poljedelstvo se neodvisno začne v Rodovitnem polmesecu, na Kitajskem, v dolini Inda, v Mezoameriki, v Andih in drugod. Presežek porodi hierarhijo, lastnino, davke, kralje, vojske, suženjstvo, pisavo. Prebivalstvo eksplodira. Zdravje povprečnega človeka upade. Prvo veliko raztezanje vrzeli med našo naravo in našim okoljem.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">Pred 5.000 leti</div>
+        <h4 class="timeline-title">Prve civilizacije</h4>
+        <p class="timeline-body">Sumer. Egipt. Dolina Inda. Šangovska Kitajska. Mesta, templji, božanski kralji, zakoniki, trgovina na dolge razdalje, organizirano vojskovanje, suženjstvo. Vzorci, ki se stekajo v kulturah brez medsebojnega stika, ker so to rešitve, po katerih ljudje posežejo pod takimi pogoji.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">800 do 200 pr. n. št.</div>
+        <h4 class="timeline-title">Osna doba</h4>
+        <p class="timeline-body">Buda. Konfucij. Lao Ce. Hebrejski preroki. Zaratustra. Sokrat, Platon, Aristotel, stoiki. Neodvisno, v med seboj daleč ločenih civilizacijah, ljudje začnejo pisno spraševati: <em>kako naj človek živi?</em> Izročila tega obdobja še vedno oblikujejo moralno in filozofsko življenje večine danes živečih ljudi.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">500 pr. n. št. do 500 n. št.</div>
+        <h4 class="timeline-title">Klasična cesarstva</h4>
+        <p class="timeline-body">Perzija, Maurijci, dinastija Han na Kitajskem, Rim. Prve ureditve, ki so s stalnimi vojskami, birokracijo, kodificiranim pravom in tlakovanimi cestami vladale desetinam milijonov. Vzniknejo univerzalne religije (krščanstvo, budizem, ki se širi proti vzhodu) kot prva programska oprema, sposobna povezati neznance v moralno skupnost v velikem obsegu.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">500 do 1500 n. št.</div>
+        <h4 class="timeline-title">Srednjeveški svet</h4>
+        <p class="timeline-body">Vznikne islam in se v stoletju razpne od Španije do Srednje Azije. Islamska zlata doba ohrani grško učenost ter napreduje v matematiki in medicini. Songovska Kitajska iznajde papirnati denar, tisk, smodnik. Mongolski imperij za kratek čas poveže Azijo in Evropo. Črna smrt pobije tretjino Evrope. Začnejo se pojavljati univerze, parlamenti, listine pravic.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">1500 do 1800</div>
+        <h4 class="timeline-title">Znanstvena revolucija in razsvetljenstvo</h4>
+        <p class="timeline-body">Kopernik. Galilei. Newton. Odkritje, da lahko <strong>opazovanje in matematika v dejstvenih vprašanjih preglasita avtoriteto</strong>. Razsvetljenstvo razširi metodo na politiko, pravo, religijo, ekonomijo. Locke, Hume, Smith, Kant. Naravne pravice, oblast s privoljenjem, ideja napredka. Sodobni svet se rodi v svojih vrednotah, preden se rodi v svojih razmerah.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">1750 do 1900</div>
+        <h4 class="timeline-title">Industrijska revolucija</h4>
+        <p class="timeline-body">Para, premog, železo, elektrika. Gostote energije, do kakršnih ni imela dostopa nobena prejšnja družba. Produktivnost naraste za velikostne rede. Mesta eksplodirajo. Družinska struktura se spremeni. Suženjstvo odpravijo po vsem atlantskem svetu. Do leta 1900 Evropa kolonizira večino planeta. Materialni svet se preoblikuje hitreje kot kadar koli prej.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">20. stoletje</div>
+        <h4 class="timeline-title">Ideologije, dekolonizacija, informatika, množično podaljšanje življenjske dobe</h4>
+        <p class="timeline-body">Tekmujejo komunizem, fašizem, liberalna demokracija. Do leta 1991 se kot prevladujoča izlušči liberalna demokracija skupaj s trgi. Imperiji razpadejo. Antibiotiki, cepiva, higiena potisnejo pričakovano življenjsko dobo s 45 na 75 let v industrializiranih državah. Pojavita se dve eksistencialni tehnologiji: jedrsko orožje, nato biotehnologija. Vrzel med človeško naravo in človeškim okoljem se razširi bolj kot kdaj prej.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">Zdaj</div>
+        <h4 class="timeline-title">Fazni prehod v teku</h4>
+        <p class="timeline-body">Globalizacija doseže vrh in se deloma obrne nazaj. Pametni telefoni povežejo večino človeštva. Družbena omrežja merljivo škodujejo duševnemu zdravju mladostnikov. Umetna inteligenca vznikne kot tehnologija za splošno rabo in v realnem času preoblikuje programsko opremo in umsko delo. Podnebne spremembe so v podatkih, ne v napovedih. Geopolitične napetosti so višje kot v katerem koli trenutku po hladni vojni. Goni se niso spremenili.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUOTE 2 ===================== -->
+<div class="container-narrow">
+  <div class="quote-block">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">Še vedno smo isti ljudje. Le v drugačni stavbi.</p>
+    <div class="quote-cite">Iz 3. poglavja. Zgodba</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ===================== THE DRIVES ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">Goni</span>
+    <h2 class="section-title">Osem motivov, ki pojasnijo <em>večino vedenja odraslih</em>.</h2>
+    <p class="section-lead">
+      Kulturna površina se dramatično razlikuje od stoletja do stoletja in od celine do celine. Goni v ozadju so izjemno stabilni. V vsakem odraslem življenju je hkrati dejavnih vseh osem in v vsakem trenutnem odločanju tehtajo drug proti drugemu. Napovedati človeško vedenje pomeni vprašati se, <strong>kateri gon je pravkar prevladujoč</strong> in kaj počnejo ostali v ozadju.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="card-grid two" style="margin-bottom: 24px;">
+      <div class="card">
+        <span class="card-tag tag-bio">Gon 01</span>
+        <h3 class="card-title">Preživetje</h3>
+        <p class="card-body">Zrak, voda, hrana, toplota, spanje, varnost pred neposredno grožnjo. Kadar niso zadovoljeni, skoraj nič drugega ni pomembno. V sodobnih industrializiranih družbah so za večino ljudi zadovoljeni samodejno. Sistem še naprej oprezuje za grožnjami, ki jih ne najde, in si izmišlja nadomestke: osoren e-poštni odgovor, naslov v novicah, družbeno zbadanje.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag tag-bio">Gon 02</span>
+        <h3 class="card-title">Razmnoževanje in spolnost</h3>
+        <p class="card-body">Najbolj očiten evolucijski gon in tisti, o katerem se najmanj odkrito govori. Trdo ožičen pod ravnijo zavesti. Ogromen del človeškega razkazovanja, dosežkov, tekmovanja in ustvarjalne produkcije je povezan s parjenjem, tudi kadar izvajalec tega ne bi tako opisal.</p>
+      </div>
+    </div>
+
+    <div class="card-grid two" style="margin-bottom: 24px;">
+      <div class="card" style="border-color: var(--accent); background: linear-gradient(135deg, var(--card) 0%, var(--accent-glow) 100%);">
+        <span class="card-tag tag-master">Gospodujoči gon</span>
+        <h3 class="card-title">Gon 03. Status</h3>
+        <p class="card-body">Vaš položaj znotraj skupine, za katero vam je mar. Najmočnejše in najmanj priznano gonilo vedenja odraslih. Osebki z višjim statusom pri družabnih sesalcih živijo dlje, se bolje hranijo, imajo več partnerjev in kažejo nižje kazalnike stresa. Padci statusa sprožijo depresijo bolj zanesljivo kot skoraj kateri koli drug posamezen dogodek. <strong>Večina tega, kar ljudje počnejo, tudi velik del tega, kar imenujejo načelo, je preoblečeno tekmovanje za status.</strong></p>
+      </div>
+      <div class="card">
+        <span class="card-tag tag-social">Gon 04</span>
+        <h3 class="card-title">Pripadnost in pleme</h3>
+        <p class="card-body">Ljudje smo se razvili kot skupinske živali. Osamljeni ljudje so bili skozi vso zgodovino skoraj vselej mrtvi, pregnani ali v skrajnih, nenavadnih okoliščinah. Osamljenost telesno boli. Kronična družbena izolacija napoveduje umrljivost v razmerju, primerljivem s kajenjem. Gon oblikuje plemena okrog vsakega zanesljivega označevalca identitete: jezika, oblačil, religije, športnega kluba, politične stranke, poklica.</p>
+      </div>
+    </div>
+
+    <div class="card-grid two" style="margin-bottom: 24px;">
+      <div class="card">
+        <span class="card-tag tag-mind">Gon 05</span>
+        <h3 class="card-title">Smisel in pomembnost</h3>
+        <p class="card-body">Ko so temeljne potrebe zadovoljene, smisel postane ozko grlo. Trije viri so dobro dokumentirani: pripadnost nečemu večjemu od sebe, prispevanje z naporom in skladna pripoved o lastnem življenju. Kadar so prisotni vsi trije, je smisla veliko. Kadar kateri koli manjka, smisel omahuje.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag tag-mind">Gon 06</span>
+        <h3 class="card-title">Razumevanje in mojstrstvo</h3>
+        <p class="card-body">Radovednost v svoji površinski obliki, mojstrstvo v svoji daljši. Vezano na dopaminsko nagrado, ko napoved uspe ali ko spretno dejanje zadene. Radovednost je krhka, ugasnejo jo dolgočasje, poniževanje ali prezgodnji odgovori. Mojstrstvo terja namensko vajo na robu trenutne zmožnosti. Temelj vsakega človeškega dosežka v znanosti, umetnosti, obrti in športu.</p>
+      </div>
+    </div>
+
+    <div class="card-grid two">
+      <div class="card">
+        <span class="card-tag tag-social">Gon 07</span>
+        <h3 class="card-title">Avtonomija in nadzor</h3>
+        <p class="card-body">Želja biti vzrok lastnih dejanj, ne predmet tujih. Stabilna prek kultur. Avtonomija na delovnem mestu napoveduje zadovoljstvo bolj zanesljivo kot plača nad določenim pragom. Gon po avtonomiji je v napetosti s pripadnostjo; zdravo odraslo življenje je pogajanje med obema.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag tag-risk">Gon 08</span>
+        <h3 class="card-title">Udobje in ugodje</h3>
+        <p class="card-body">Najpreprostejši gon in tisti, ki ga naše sodobno okolje najuspešneje ugrabi. Dopaminski sistem nagrajevanja se je razvil, da je možganom sporočal »temu je vredno slediti«. V obilju ta sistem ugrabijo prirejena hrana, algoritemski viri vsebin, igre na srečo, pornografija. Gon ni patološki. Spremenilo se je okolje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUOTE 3 ===================== -->
+<div class="container-narrow">
+  <div class="quote-block">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">Status je najbolj podcenjeno posamezno gonilo vedenja odraslih ljudi. Večina tega, kar ljudje počnejo, tudi velik del tega, za kar mislijo, da je načelno, je preoblečeno tekmovanje za status.</p>
+    <div class="quote-cite">Iz 4. poglavja. Goni</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ===================== THE UNIVERSALS ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">Univerzalije</span>
+    <h2 class="section-title">Lastnosti, prisotne v <em>vsaki preučeni človeški družbi</em>.</h2>
+    <p class="section-lead">
+      Leta 1991 je antropolog Donald Brown objavil seznam človeških univerzalij. Na stotine postavk, ki jih delijo vse skrbno opazovane kulture. Če se neka lastnost pojavi pri predagrarnih lovcih in nabiralcih, v starodavnih sumerskih mestih, na srednjeveškem Kitajskem in v sodobnem Manhattnu, je del človeške narave, ne kulturno naključje.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="universals">
+      <div class="universal-card"><div class="universal-title">Jezik</div><p class="universal-body">Slovnica s samostalniki in glagoli. Čas ali njegove ustreznice. Logični operatorji (in, ne, resnično, napačno). Prevod je vselej mogoč.</p></div>
+      <div class="universal-card"><div class="universal-title">Glasba in ples</div><p class="universal-body">Skupinsko petje. Ritem. Ples. Uspavanke. Glasba, vezana na obred.</p></div>
+      <div class="universal-card"><div class="universal-title">Družina in sorodstvo</div><p class="universal-body">Zakonska zveza v takšni ali drugačni obliki. Tabuji o incestu. Parjenje v zvezo. Vloge matere, očeta, otroka. Razširjene sorodstvene mreže.</p></div>
+      <div class="universal-card"><div class="universal-title">Spolnost in razmnoževanje</div><p class="universal-body">Spolna ljubosumnost. Sramežljivost glede nekaterih vedenj. Pojmi lepote. Šege ob puberteti.</p></div>
+      <div class="universal-card"><div class="universal-title">Politika in pravo</div><p class="universal-body">Vodenje. Reševanje sporov. Lastnina. Dedovanje. Pravila. Kaznovanje.</p></div>
+      <div class="universal-card"><div class="universal-title">Religija in obred</div><p class="universal-body">Vera v nadnaravne dejavnike. Obredi ob rojstvu, smrti, prehodih. Magično mišljenje. Pojmi duše ali duha.</p></div>
+      <div class="universal-card"><div class="universal-title">Morala</div><p class="universal-body">Občutek za pravičnost. Vzajemnost. Empatija. Različna moralna merila za skupino in tujce.</p></div>
+      <div class="universal-card"><div class="universal-title">Estetika</div><p class="universal-body">Okraševanje telesa. Likovna umetnost. Pojmi lepote. Poimenovanja barv.</p></div>
+      <div class="universal-card"><div class="universal-title">Orodja</div><p class="universal-body">Raba orodij. Izdelovanje orodij. Posode. Kuhanje. Ogenj. Orožja. Oblačila.</p></div>
+      <div class="universal-card"><div class="universal-title">Gospodarsko življenje</div><p class="universal-body">Menjava. Specializacija po spolu in starosti. Vzajemno obdarovanje. Trgovanje. Lastnina.</p></div>
+      <div class="universal-card"><div class="universal-title">Znanje</div><p class="universal-body">Ljudska biologija. Ljudska fizika. Ljudska psihologija. Verovanja o smrti in bolezni.</p></div>
+      <div class="universal-card"><div class="universal-title">Družbena struktura</div><p class="universal-body">Skupina proti tujcem. Statusne hierarhije. Sankcije. Ločene vloge po spolu.</p></div>
+    </div>
+
+    <div class="callout" style="margin-top: 60px;">
+      <div class="callout-label">Kaj to pomeni</div>
+      <p class="callout-body">Religija, hierarhija, spolne vloge, lastnina, umetnost, pripovedništvo in konflikt so <em>univerzalni po obliki, raznoliki v podrobnostih</em>. Nikdar ni bila dokumentirana družba brez nadnaravnih verovanj. Prav tako ne družba brez statusnih razlik. Strogih trditev 20. stoletja, da je spol povsem konstruiran ali da je lastnina umeten pojav, medkulturni zapis ne podpira. Tudi nasprotne, biološko deterministične trditve ne vzdržijo. Resnični sta obe, biologija in kultura, in obe opravljata pomembno delo.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== THE BIG FIVE ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">Individualna variabilnost</span>
+    <h2 class="section-title">Znotraj univerzalij <em>velika peterica</em>.</h2>
+    <p class="section-lead">
+      Pet razsežnosti osebnosti, potrjenih prek številnih kultur in jezikov. Vsaka je približno 40 do 60 odstotno dedna. Večinoma stabilna od poznega mladostništva naprej. Lastnost je vaše izhodišče, ne vaša identiteta. Delati z njo se obnese bolje kot boriti se proti njej.
+    </p>
+
+    <div class="bigfive">
+      <div class="bigfive-row head">
+        <div>Lastnost</div>
+        <div>Visoki pol je videti takole</div>
+        <div>Nizki pol je videti takole</div>
+      </div>
+      <div class="bigfive-row">
+        <div class="bigfive-trait">Odprtost</div>
+        <div class="bigfive-high">Radoveden, domiseln, privlačijo ga novost in abstrakcije. Umetniška zanimanja. Pogosto politično liberalen.</div>
+        <div class="bigfive-low">Praktičen, konvencionalen, ima raje znano. Manj zanimanja za abstrakcije.</div>
+      </div>
+      <div class="bigfive-row">
+        <div class="bigfive-trait">Vestnost</div>
+        <div class="bigfive-high">Discipliniran, urejen, zanesljiv, usmerjen v prihodnost, priden. Napoveduje uspeh v izobraževanju in karieri.</div>
+        <div class="bigfive-low">Prožen, spontan, manj osredotočen na načrtovanje ali urnike.</div>
+      </div>
+      <div class="bigfive-row">
+        <div class="bigfive-trait">Ekstravertnost</div>
+        <div class="bigfive-high">Družabni stiki mu dajejo energijo. Zgovoren, odločen, išče spodbudo.</div>
+        <div class="bigfive-low">Zadržan, ima raje samoto. Nižja družabna energija. Ni isto kot socialna tesnoba.</div>
+      </div>
+      <div class="bigfive-row">
+        <div class="bigfive-trait">Sprejemljivost</div>
+        <div class="bigfive-high">Sodelovalen, zaupljiv, topel, izogiba se sporom. Napoveduje sodelovalne odnose.</div>
+        <div class="bigfive-low">Tekmovalen, skeptičen, pripravljen biti nepriljubljen. Neposreden.</div>
+      </div>
+      <div class="bigfive-row">
+        <div class="bigfive-trait">Nevroticizem</div>
+        <div class="bigfive-high">Nagnjen k negativnim čustvom, tesnobi, nihanju razpoloženja. Občutljiv na grožnje. Napoveduje tveganje za duševno zdravje.</div>
+        <div class="bigfive-low">Čustveno stabilen. Manj odziven. Mirnejši pod stresom.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== THE MISMATCH ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">Neujemanje</span>
+    <h2 class="section-title">Razvita narava proti <em>sodobnemu okolju</em>.</h2>
+    <p class="section-lead">
+      <strong>Teorija neujemanja</strong> je daleč najuporabnejša leča za sodobne psihološke motnje. Večina kroničnih težav ni patologija sistema. So predvidljiv odziv dobro delujočega prednamskega sistema na vhodne podatke, za katere ni bil zgrajen. Biologija je stabilna. Okolje se je spremenilo. Ukrepi, ki okolje približajo prednamskim pogojem, se ponavadi obnesejo.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="mismatch-grid">
+      <div class="mismatch-header header-domain">Področje</div>
+      <div class="mismatch-header header-ancient">Prednamsko pričakovanje</div>
+      <div class="mismatch-header header-modern">Sodobna resničnost</div>
+
+      <div class="mismatch-row-domain">Hrana</div>
+      <div class="mismatch-cell ancient">Pomanjkanje kalorij. Raznolika nabrana prehrana. Težko dostopna, bogata z vlakninami, sezonska. Telo se je razvilo tako, da hlepi po energijski gostoti in agresivno skladišči maščobo.</div>
+      <div class="mismatch-cell modern">Poceni, na voljo ves čas, prirejena za okusnost. Rafiniran sladkor in maščoba. Malo vlaknin. Vse leto. Posledica: epidemija debelosti, sladkorna bolezen tipa 2, zamaščena jetra.</div>
+
+      <div class="mismatch-row-domain">Gibanje</div>
+      <div class="mismatch-cell ancient">Približno 10 kilometrov na dan. Vsakodnevna telesna dejavnost, nujna za preživetje. Srčno-žilni, mišično-skeletni in presnovni sistemi jo vsi pričakujejo.</div>
+      <div class="mismatch-cell modern">8 do 12 ur sedenja na dan. Bolečine v hrbtu, težave s sklepi, sarkopenija, srčno-žilne bolezni, presnovni sindrom, motnje razpoloženja.</div>
+
+      <div class="mismatch-row-domain">Svetloba in spanje</div>
+      <div class="mismatch-cell ancient">Močno sonce podnevi. Popolna tema ponoči. Dvofazno prožno spanje. Cirkadiani sistem umerjen po soncu.</div>
+      <div class="mismatch-cell modern">Življenje v zaprtih prostorih z malo dnevne svetlobe. Zasloni v modrem spektru ponoči. Pozno leganje spat. Zbujanje z budilko. Kronično delno pomanjkanje spanja.</div>
+
+      <div class="mismatch-row-domain">Družbena gostota</div>
+      <div class="mismatch-cell ancient">Skupine 30 do 50 ljudi, mreže po ~150. Poznali ste vse, ki ste jih videli. Nikdar niste bili anonimni. Možgani pričakujejo globoke odnose.</div>
+      <div class="mismatch-cell modern">Mesta z milijoni. Vsakodnevna izpostavljenost tisočem obrazov, večinoma tujcev. Osamljenost sredi množic. Možgani večino srečanj obravnavajo kot komaj vredna zaupanja.</div>
+
+      <div class="mismatch-row-domain">Informacije</div>
+      <div class="mismatch-cell ancient">Redke. Od ljudi, ki ste jih poznali. Vezane na neposredne posledice. Zgodbe, ki so jih ponavljali pripovedovalci, ki ste jih videli. Nov vhodni podatek je bil redkost.</div>
+      <div class="mismatch-cell modern">Neskončne. Večinoma od tujcev. Odvezane od posledic. Algoritemski viri vsebin optimizirajo za angažiranost, kar navadno pomeni čustveno vzburjenje.</div>
+
+      <div class="mismatch-row-domain">Vidnost statusa</div>
+      <div class="mismatch-cell ancient">Referenčna skupina je bila vaša skupina in okoliške skupine. Primerjali ste se z ljudmi, katerih življenja ste poznali. Omejeno tekmovanje.</div>
+      <div class="mismatch-cell modern">Referenčna skupina je kdor koli se znajde v vašem viru vsebin. Poklicni športniki, milijarderji, zvezdniki, kurirani izbori vrhuncev iz življenj vrstnikov. Primerjava teče proti nemogoči porazdelitvi.</div>
+
+      <div class="mismatch-row-domain">Kronična grožnja</div>
+      <div class="mismatch-cell ancient">Grožnje so bile akutne in prepoznavne. Levi, tekmeci, bolezen. Odziv na stres je poskočil, mobiliziral dejanje, nato se je razrešil.</div>
+      <div class="mismatch-cell modern">Grožnje so abstraktne, kronične, nerazrešljive. Finančna negotovost, nestabilnost kariere, cikli novic, podnebne spremembe. Cikel stresa se nikoli ne sklene. Izgorelost.</div>
+
+      <div class="mismatch-row-domain">Smisel</div>
+      <div class="mismatch-cell ancient">Priskrbljen samodejno. Pleme, vloga, svetovni nazor, predniki, oprijemljiv prispevek. Sistema ni bilo treba graditi.</div>
+      <div class="mismatch-cell modern">Nič od tega ni priskrbljeno. Plemena je treba zgraditi. Svetovne nazore izbrati. Vloge niso podedovane. Prispevek je abstrakten in pogosto anonimen. Praznina smisla.</div>
+
+      <div class="mismatch-row-domain">Trg parjenja</div>
+      <div class="mismatch-cell ancient">Omejen znan nabor. Parjenje v zvezo, spodbujano pri obeh spolih zaradi zahtev vzgoje otrok. Kompromisi vidni skozi čas.</div>
+      <div class="mismatch-cell modern">Neomejen nabor, posredovan prek aplikacij. Dinamika koristi majhnemu deležu moških in žensk. Več samstva, poznejše poroke, nižja rodnost, nezadovoljstvo s parjenjem pri obeh spolih.</div>
+
+      <div class="mismatch-row-domain">Novost</div>
+      <div class="mismatch-cell ancient">Redka in običajno pomenljiva. Novo ozemlje, orodje, oseba, situacija. Dopaminski sistem je novost označil kot vredno pozornosti.</div>
+      <div class="mismatch-cell modern">Neskončna in prirejena. Nova vsebina vsakih nekaj sekund. Preplavljenost z dopaminom. Zmanjšana nagrada iz naravnih virov. Nenehna blaga lakota po dražljajih.</div>
+    </div>
+
+    <div class="callout" style="margin-top: 48px;">
+      <div class="callout-label">Vzorec</div>
+      <p class="callout-body">Vsaka vrstica je ista zgodba. Starodaven sistem, optimiziran za eno okolje, zdaj prejema vhodne podatke iz drugega. Motnja ni naključna. Je sistematičen izid dobro delujočega starodavnega programa, ki teče na vhodnih podatkih, za katere ni bil zgrajen. <em>Z biologijo je vse v redu. Narobe so vhodni podatki.</em></p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== SYSTEM DIAGRAM ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">Model</span>
+    <h2 class="section-title">Sistem, ki ga <em>zares</em> poganjate.</h2>
+    <p class="section-lead">
+      Nekoliko bogatejša slika modela kot sistema z deli, ki se med seboj prepletajo. Puščice so v praksi dvosmerne. Vedenje oblikuje okolje. Izidi oblikujejo možgane. Skupne fikcije postanejo del okolja. Sistem je rekurziven.
+    </p>
+
+    <div class="system-diagram">
+      <div class="system-flow">
+        <div class="system-node">
+          <span class="system-node-label">Plast 01</span>
+          <div class="system-node-content">Okolje<br><span style="color: var(--text-very-dim); font-size: 13px;">fizično, tehnološko, kulturno</span></div>
+        </div>
+        <div class="system-arrow">&darr;</div>
+        <div class="system-node">
+          <span class="system-node-label">Plast 02</span>
+          <div class="system-node-content">Razvita strojna oprema<br><span style="color: var(--text-very-dim); font-size: 13px;">telo in možgani (limbični sistem in skorja)</span></div>
+        </div>
+        <div class="system-arrow">&darr;</div>
+        <div class="system-node">
+          <span class="system-node-label">Plast 03</span>
+          <div class="system-node-content">Univerzalni goni<br><span style="color: var(--text-very-dim); font-size: 13px;">preživetje, spolnost, status, pripadnost, smisel, mojstrstvo, avtonomija, udobje</span></div>
+        </div>
+        <div class="system-arrow">&darr;</div>
+        <div class="system-node">
+          <span class="system-node-label">Plast 04</span>
+          <div class="system-node-content">Skupne fikcije<br><span style="color: var(--text-very-dim); font-size: 13px;">denar, bogovi, narodi, znamke, zakoni, pogodbe</span></div>
+        </div>
+        <div class="system-arrow">&darr;</div>
+        <div class="system-node">
+          <span class="system-node-label">Plast 05</span>
+          <div class="system-node-content">Vedenje<br><span style="color: var(--text-very-dim); font-size: 13px;">posamično in kolektivno</span></div>
+        </div>
+        <div class="system-arrow">&darr;</div>
+        <div class="system-node">
+          <span class="system-node-label">Plast 06</span>
+          <div class="system-node-content">Izidi in povratne informacije<br><span style="color: var(--text-very-dim); font-size: 13px;">znova postanejo okolje</span></div>
+        </div>
+      </div>
+      <div class="system-loop-label">&uarr; Zanka se sklene &uarr;</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== THE FIVE ERRORS ===================== -->
+<section>
+  <div class="container">
+    <div class="container-narrow" style="padding: 0;">
+      <span class="section-label">Pogoste napake</span>
+      <h2 class="section-title">Pet napak, ob katere se boste <em>spotaknili</em>.</h2>
+      <p class="section-lead">
+        Ko začnete raziskovati človeško naravo, boste naleteli na te vzorce zmot. Vsak od njih je napol pravilen in nevaren, kadar ga vzamete za celovito razlago. Če jih poimenujete vnaprej, preprečite večino škode.
+      </p>
+    </div>
+
+    <div class="errors-grid">
+      <div class="error-card">
+        <div class="error-num">Napaka 01</div>
+        <h4 class="error-name">Nepopisan list</h4>
+        <p class="error-body">Trditev, da se ljudje rodimo brez nagnjenj in da vse vedenje izvira iz kulture. V veliki meri napačna. Rodimo se z bogatimi razvitimi nagnjenji: prirojeno pozornostjo do obrazov, vrstnim redom usvajanja jezika, strahom pred kačami, moralnimi intuicijami. Kultura gradi na tem ogrodju, včasih dramatično. Ne piše na prazno stran.</p>
+      </div>
+      <div class="error-card">
+        <div class="error-num">Napaka 02</div>
+        <h4 class="error-name">Biološki determinizem</h4>
+        <p class="error-body">Nasprotna zmota. Trditev, da biologija v celoti določa vedenje in da je kultura zgolj okras. Prav tako napačna. Biologija postavi razpone in privzete vrednosti. Znotraj teh razponov ima kultura ogromno moč. Resnični sta obe in za razlago česar koli potrebujete obe.</p>
+      </div>
+      <div class="error-card">
+        <div class="error-num">Napaka 03</div>
+        <h4 class="error-name">Plemeniti divjak</h4>
+        <p class="error-body">Zamisel, da so predcivilizacijski ljudje živeli v miru in da nas je civilizacija pokvarila. Lovsko-nabiralniško življenje je imelo resnične prednosti: enakopravnost, zdravo prehrano, močne vezi. Imelo je tudi stopnje umorov, ki bi zgrozile sodobno mesto, pogosto vojskovanje, visoko umrljivost otrok, nič medicine. Ni bilo raj.</p>
+      </div>
+      <div class="error-card">
+        <div class="error-num">Napaka 04</div>
+        <h4 class="error-name">Sodobni ljudje smo drugačni</h4>
+        <p class="error-body">Zrcalna slika. Trditev, da smo kategorično drugačni od ljudi izpred 2.000 ali 20.000 let zaradi iPhonov ali znanosti. Napačno. Človeška biologija se je komaj kaj spremenila. Globinska psihologija kmeta iz bronaste dobe je v bistvu naša. Preberite Homerja. Prepoznali boste sebe.</p>
+      </div>
+      <div class="error-card">
+        <div class="error-num">Napaka 05</div>
+        <h4 class="error-name">Vse pojasnjuje eno samo gonilo</h4>
+        <p class="error-body">Skušnjava, da vedenje zvedete na eno samo gospodujočo spremenljivko. Spolnost, denar, status, strah pred smrtjo, moč, razredni boj, racionalna izbira. Vsak velik teoretik, ki je to poskusil, ima deloma prav in v veliki meri narobe. Človeško vedenje je naddoločeno. Vselej je dejavnih več gonov. Teorija, ki vse zvede na eno samo gonilo, bo zgrešila večino slike.</p>
+      </div>
+      <div class="error-card">
+        <div class="error-num">Dodatek</div>
+        <h4 class="error-name">Romantiziranje prihodnosti</h4>
+        <p class="error-body">Napredek je resničen, ni pa zajamčen. Tehnologija ne izboljša samodejno človeške blaginje. Nedavne tehnologije (prirejena hrana, družbena omrežja, aplikacije za zmenke) so poleg svojih koristi prinesle znatne nove škode. Predpostavite, da bo z naslednjo tehnologijo enako, tudi če vam je všeč.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== COMPARISON: WHAT CHANGES ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">Stabilnost in sprememba</span>
+    <h2 class="section-title">Kaj zgodovina <em>spreminja</em> in česa <em>ne</em>.</h2>
+    <p class="section-lead">
+      Večina stabilnih značilnosti vašega trenutnega življenja je odvisna od nadaljnjega delovanja infrastrukture sodelovanja. Večina stabilnih značilnosti vašega notranjega življenja je odvisna od nadaljnjega delovanja vaše biologije. Računajte, da bo drugo zanesljivejše od prvega.
+    </p>
+
+    <div class="comparison">
+      <div class="comparison-card bad">
+        <div class="comparison-label">Se je dramatično spremenilo</div>
+        <h3 class="comparison-title">Razmere</h3>
+        <p class="comparison-body">
+          Materialne razmere (hrana, zavetje, medicina, prevoz). Hitrost komuniciranja. Povprečna življenjska doba in umrljivost dojenčkov. Suženjstvo, formalna hierarhija, pričakovanja glede spola. Politične ustanove (demokracija, državljanstvo, pravice). Verska krajina. Povprečne stopnje nasilja.
+          <br><br>
+          Vse to se je skozi stoletja izjemno premaknilo. Večina tega, kar se pri vaši trenutni družbi zdi trajno, je novo in odvisno od okoliščin.
+        </p>
+      </div>
+      <div class="comparison-card good">
+        <div class="comparison-label">Je ostalo v bistvu enako</div>
+        <h3 class="comparison-title">Narava</h3>
+        <p class="comparison-body">
+          Goni: status, spolnost, pripadnost, smisel, udobje. Osnovna čustvena paleta. Kognitivna arhitektura (limbični sistem hitrejši od skorje, večinoma nezavedne odločitve). Potreba po plemenu in obredu. Vzorci sodelovanja in odpadanja. Dinamika vzpona in zatona civilizacij. Resničnost asimetrij, ki se sestavljajo.
+          <br><br>
+          To je bilo stabilno tisočletja in bo stabilno tudi v predvidljivi prihodnosti.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUOTE 4 ===================== -->
+<div class="container-narrow">
+  <div class="quote-block">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">Civilizacija je tehnologija za sodelovanje v velikem obsegu navkljub naši naravi. Je resnična, je krhka in njeno nadaljevanje ni zajamčeno.</p>
+    <div class="quote-cite">Iz kazala. Različica v tridesetih sekundah</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ===================== THE PROTOCOL ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">Najmanjši delujoči protokol</span>
+    <h2 class="section-title">Deset <em>infrastrukturnih</em> navad.</h2>
+    <p class="section-lead">
+      Večina optimizacije odraslega življenja ni v dodajanju, temveč v odstranjevanju napačnih vhodnih podatkov in ponovnem grajenju pravih. Večina tega, kar velja za klinično zdravljenje duševnega zdravja, ljudi pravzaprav le napravi dovolj funkcionalne, da približno počnejo te reči. Če jih zmorete početi neposredno, več mesecev obravnave stisnete v samovoden protokol.
+    </p>
+
+    <div class="protocol">
+      <div class="protocol-item">
+        <div class="protocol-num">01</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Spanje</h4>
+          <p class="protocol-body">Dosleden urnik. Temna spalnica. Nič zaslonov uro pred spanjem. Jutranja sončna svetloba. Cilj 7 do 9 ur. Posamezni ukrep z največjim vzvodom v sodobnem zdravju.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">02</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Gibanje</h4>
+          <p class="protocol-body">Vsak dan hodite, po možnosti na prostem. Vadba z uporom dvakrat na teden. Ne sedite dlje kot 30 do 60 minut, ne da bi vstali. Telo dolgotrajno nedejavnost razume kot signal za preživetje, da so razmere slabe.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">03</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Hrana</h4>
+          <p class="protocol-body">Večino časa polnovredna živila. Ultrapredelano hrano omejite pri izviru tako, da je ne kupujete. Dovolj beljakovin. Vlaknine. Rešitev ni »jejte manj«. Rešitev je sprememba prehranskega okolja.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">04</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Svetloba</h4>
+          <p class="protocol-body">Zjutraj močna svetloba, po možnosti na prostem v prvi uri po prebujanju. Zvečer pridušena svetloba. Vsak dan čas na prostem. Cirkadiani sistem je umerjen po soncu.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">05</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Povezanost</h4>
+          <p class="protocol-body">Dva do štirje bližnji odnosi, dejavno vzdrževani. Tedenski osebni obred z nekom, za katerega vam je mar. Osamljeni ljudje propadajo. To ni izbirno. To je podlaga.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">06</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Informacijska dieta</h4>
+          <p class="protocol-body">Ostro omejite vsebine iz algoritemskih tokov. Nadomestite jih z izbranimi viri: knjigami, določenimi ustvarjalci, daljšimi oblikami. Telefon zunaj spalnice. Znova zgradite zmožnost za dolgčas. Ta je podlaga ustvarjalnosti.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">07</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Status</h4>
+          <p class="protocol-body">Premišljeno izberite svoje hierarhije. Kurirajte svoj vir vsebin tako, da odstranite neproduktivne primerjave. Naredite popis statusnih iger, ki jih igrate. Odločite se, v katere vlagati in iz katerih izstopiti.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">08</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Smisel</h4>
+          <p class="protocol-body">Praksa ali projekt, ki se vam zdi sam po sebi vreden truda, zavarovan v koledarju. Večina odraslih smisel podceni v prid nujnih zahtev. Cena je odložena in huda.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">09</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Okrevanje po stresu</h4>
+          <p class="protocol-body">Pravi počitek, ne uživanje medijev. Sprehodi. Čas v naravi. Spanje. Savna. Dihalne vaje. Karkoli vam sklene cikel stresa. Sodobno življenje ga vedno znova odpira. Skleniti ga morate premišljeno.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">10</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Parjenje</h4>
+          <p class="protocol-body">Svoj odnos ali iskanje odnosa obravnavajte kot resen življenjski projekt, ne kot hobi. Izogibajte se nadomestkom, ki gon izčrpavajo, ne da bi ga potešili. Infrastruktura za stabilne partnerske vezi je oslabela. Potrebno je zavestno grajenje.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 36px;">
+      <div class="callout-label">Če to počnete dosledno tri mesece</div>
+      <p class="callout-body">Počutili se boste kot drug človek. To ni jamstvo pred resno duševno boleznijo, ki ima pogosto biološke sestavine, ki zahtevajo zdravljenje. Je podlaga, na kateri sloni dobro duševno zdravje. To podlago je sodobno življenje tiho odštelo. <em>Njena ponovna vzpostavitev je osebni ukrep z največjim vzvodom, kar jih je na voljo.</em></p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== QUOTE 5 ===================== -->
+<div class="container-narrow">
+  <div class="quote-block">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">Gojite tisto, kar hoče vaša biologija. Preglasite tisto, kar izkorišča vaše okolje.</p>
+    <div class="quote-cite">Iz 7. poglavja. Sinteza</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ===================== UNCERTAINTY ===================== -->
+<section class="tight">
+  <div class="container-narrow">
+    <span class="section-label">Česar model ne razreši</span>
+    <h2 class="section-title">Kje je ta model <em>negotov</em>.</h2>
+    <p class="section-lead">
+      Dober model poimenuje svoje meje. Nekaj poštenih negotovosti, ki jih velja nositi ob boku vsemu, kar preostanek dokumenta trdi z gotovostjo.
+    </p>
+
+    <div class="card-grid two">
+      <div class="card">
+        <h3 class="card-title">Mehanizem kognitivne revolucije</h3>
+        <p class="card-body">Je bil genetski, kulturni ali oboje? Dokazi nakazujejo, a niso dokončni. Vodilne hipoteze se stekajo k drobnemu genetskemu premiku, ki je odklenil zmožnost, za izraz katere je bila potrebna kulturna kritična masa, podrobnosti pa ostajajo odprte.</p>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Zavest sama</h3>
+        <p class="card-body">Nobeden od modelov v izvorniku se ne dotakne trdega problema. Zakaj subjektivno izkustvo sploh obstaja, ostaja odprto, in večina tega, kar povemo o psihologiji, o tem molči.</p>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Geni proti okolju, v vsakem posameznem primeru</h3>
+        <p class="card-body">Ocene dednosti na ravni populacije se ne prevedejo čisto na posamezne primere. Vedeti, da je neka lastnost v populaciji 50 odstotno dedna, vam ne pove tako rekoč ničesar o tem, kaj je mogoče za določenega človeka.</p>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Ljudje, globoko vpeti v umetna okolja</h3>
+        <p class="card-body">Ljudje, ki so odrasli povsem na spletu, imajo morda drugače umerjene gone. Še ne vemo, kako je to videti v populacijskem obsegu. Sedanja kriza duševnega zdravja mladostnikov ponuja prve podatke.</p>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Učinek umetne inteligence na infrastrukturo sodelovanja</h3>
+        <p class="card-body">Denar, pogodbe, znamke, identiteta. Vse to lahko umetna inteligenca v naslednjih 10 do 20 letih preobrazi. Goni se ne bodo spremenili. Ustanove, ki jih usmerjajo, se bodo.</p>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Ali ima cikel vzpona in zatona zdaj enako obliko</h3>
+        <p class="card-body">Zgodovina nakazuje cikle. Sedanji trenutek se od vseh prejšnjih v nekaterih točkah razlikuje: globalna povezanost, tehnološko pospeševanje. Cikel se lahko stisne, raztegne ali spremeni obliko.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 36px; font-size: 15px; color: var(--text-very-dim); line-height: 1.6; text-align: center; font-style: italic; font-family: 'Playfair Display', serif;">
+      Model je dovolj trden, da nanj stavite. Ni pa dovolj trden, da bi terjal gotovost. Temu ustrezno ga uporabljajte.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== CLOSING ===================== -->
+<section class="closing">
+  <div class="closing-inner">
+    <div class="closing-pre">Zaključek</div>
+    <h2 class="closing-title">Ste biološki organizem z omejenim časom in naborom gonov, ki lahko, pravilno nahranjeni, porodijo razcvet.</h2>
+    <p class="closing-body">
+      Isti goni, pravilno razumljeni, lahko porodijo tudi življenje, ki je na videz natrpano, a znotraj prazno. V povprečnem odraslem življenju imate okoli 4.000 tednov, več ali manj, in znaten delež ste jih že porabili. Preostali so končni in nepovrnljivi.
+      <br><br>
+      To ni depresivno spoznanje. Je razjasnjujoče. Goni, ki so v nekem trenutku najglasnejši, niso vselej tisti, ki so pomembni na obzorju tridesetih let. Statusna igra, ki vas zdaj požira, bo čez 10 let nepomembna. Odnosi, ki jih zdaj zanemarjate, bodo tisti, za katere si boste želeli, da bi jih negovali. Prispevek, ki ga vedno znova odlagate, je tisti, ki ga boste obžalovali.
+    </p>
+    <div class="closing-attribution">Uporabljajte model. Dodajajte mu. Posodobite ga, ko resničnost to zahteva.</div>
+  </div>
+</section>
+
+<footer class="footer">
+  Ustvarjeno iz <a href="./index.md">Context/Knowledge/topics/humanity/human-nature/</a> &nbsp;&middot;&nbsp; 16. 5. 2026
+</footer>
+</div>
+
+<script>
+(function(){
+  var TITLES={en:'Human Nature From First Principles',sl:'Človeška narava iz prvih principov'};
+  function pick(){var s=null;try{s=localStorage.getItem('hn-lang');}catch(e){}if(s==='en'||s==='sl')return s;return ((navigator.language||'en').toLowerCase().indexOf('sl')===0)?'sl':'en';}
+  function apply(l){
+    document.documentElement.lang=l;
+    var layers=document.querySelectorAll('[data-lang-layer]');
+    for(var i=0;i<layers.length;i++)layers[i].classList.toggle('active',layers[i].getAttribute('data-lang-layer')===l);
+    var btns=document.querySelectorAll('.lang-toggle button');
+    for(var j=0;j<btns.length;j++)btns[j].classList.toggle('active',btns[j].getAttribute('data-l')===l);
+    if(TITLES[l])document.title=TITLES[l];
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    var btns=document.querySelectorAll('.lang-toggle button');
+    for(var i=0;i<btns.length;i++){btns[i].addEventListener('click',function(){var l=this.getAttribute('data-l');try{localStorage.setItem('hn-lang',l);}catch(e){}apply(l);});}
+    apply(pick());
+  });
+})();
+</script>
 </body>
 </html>
