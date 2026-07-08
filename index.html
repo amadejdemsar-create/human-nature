@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08060c">
+<title>Human Nature From First Principles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #08060c;
+  --bg-deep: #050308;
+  --card: #0f0d18;
+  --card-hover: #15131e;
+  --card-elevated: #181522;
+  --border: #1e1b2c;
+  --border-bright: #2d2940;
+  --text: #ece7f1;
+  --text-dim: #8a8298;
+  --text-very-dim: #5c576a;
+  --accent: #d4a056;
+  --accent-bright: #e8b56a;
+  --accent-glow: rgba(212, 160, 86, 0.12);
+  --accent-glow-strong: rgba(212, 160, 86, 0.22);
+  --green: #5fbf73;
+  --green-glow: rgba(95, 191, 115, 0.10);
+  --red: #d97070;
+  --red-glow: rgba(217, 112, 112, 0.10);
+  --blue: #7aa4d4;
+  --blue-glow: rgba(122, 164, 212, 0.10);
+  --purple: #a67ad4;
+  --purple-glow: rgba(166, 122, 212, 0.10);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+* { scrollbar-color: var(--border-bright) var(--bg-deep); scrollbar-width: thin; }
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container-narrow {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 100px 0;
+  position: relative;
+}
+
+section.tight {
+  padding: 70px 0;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-bright), transparent);
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 120px 24px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 1200px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+}
+
+.hero-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 32px;
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 100px;
+  background: var(--accent-glow);
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(44px, 7vw, 96px);
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+  background: linear-gradient(180deg, var(--text) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title em {
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: clamp(17px, 2vw, 22px);
+  color: var(--text-dim);
+  max-width: 760px;
+  margin: 0 auto 40px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-very-dim);
+}
+
+.hero-meta span { display: flex; align-items: center; gap: 8px; }
+.hero-meta .dot { width: 4px; height: 4px; background: var(--accent); border-radius: 50%; }
+
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-very-dim);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  animation: bob 2.5s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translate(-50%, 0); opacity: 0.5; }
+  50% { transform: translate(-50%, 8px); opacity: 1; }
+}
+
+/* SECTION HEADERS */
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -0.015em;
+}
+
+.section-title em { font-style: italic; color: var(--accent); }
+
+.section-lead {
+  font-size: clamp(17px, 1.5vw, 20px);
+  color: var(--text-dim);
+  line-height: 1.55;
+  max-width: 760px;
+  margin-bottom: 56px;
+}
+
+.section-lead strong { color: var(--text); font-weight: 600; }
+
+/* THE MODEL CARD */
+.big-idea {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.big-idea::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--accent-glow-strong) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.big-idea-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.big-idea-text {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.5;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--text);
+  position: relative;
+  z-index: 1;
+}
+
+.big-idea-text strong { color: var(--accent); font-style: normal; font-weight: 700; }
+
+/* CARD GRIDS */
+.card-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.card-grid.two { grid-template-columns: repeat(2, 1fr); }
+.card-grid.three { grid-template-columns: repeat(3, 1fr); }
+.card-grid.four { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 36px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  border-color: var(--border-bright);
+  background: var(--card-hover);
+  transform: translateY(-3px);
+}
+
+.card-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.card-body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+.card-body strong { color: var(--text); font-weight: 600; }
+
+.card-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.tag-master { background: var(--accent-glow); color: var(--accent); }
+.tag-bio { background: var(--green-glow); color: var(--green); }
+.tag-social { background: var(--blue-glow); color: var(--blue); }
+.tag-mind { background: var(--purple-glow); color: var(--purple); }
+.tag-risk { background: var(--red-glow); color: var(--red); }
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  padding-left: 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 30px;
+  bottom: 30px;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--border-bright) 8%, var(--border-bright) 92%, transparent);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 80px;
+  padding-bottom: 50px;
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-dot {
+  position: absolute;
+  left: 19px;
+  top: 6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  z-index: 1;
+}
+
+.timeline-dot::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot::after {
+  inset: 2px;
+  box-shadow: 0 0 16px var(--accent);
+}
+
+.timeline-when {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.timeline-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.timeline-body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+.timeline-body strong { color: var(--text); }
+
+/* QUOTE */
+.quote-block {
+  text-align: center;
+  padding: 80px 0;
+  position: relative;
+}
+
+.quote-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 120px;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 0.5;
+  opacity: 0.4;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.quote-text {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 3vw, 36px);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text);
+  max-width: 900px;
+  margin: 0 auto 24px;
+}
+
+.quote-cite {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-very-dim);
+  font-weight: 600;
+}
+
+/* MISMATCH TABLE */
+.mismatch-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.mismatch-header {
+  background: var(--card-elevated);
+  padding: 18px 22px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.mismatch-header.header-domain { color: var(--accent); }
+.mismatch-header.header-ancient { color: var(--green); }
+.mismatch-header.header-modern { color: var(--red); }
+
+.mismatch-row-domain {
+  background: var(--card);
+  padding: 22px;
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+}
+
+.mismatch-cell {
+  background: var(--card);
+  padding: 22px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-dim);
+}
+
+.mismatch-cell.ancient { border-left: 2px solid var(--green-glow); }
+.mismatch-cell.modern { border-left: 2px solid var(--red-glow); }
+
+/* SYSTEM DIAGRAM */
+.system-diagram {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 60px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.system-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.system-node {
+  background: var(--card-elevated);
+  border: 1px solid var(--border-bright);
+  border-radius: 14px;
+  padding: 22px 32px;
+  text-align: center;
+  min-width: 320px;
+  max-width: 540px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.system-node:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 32px var(--accent-glow);
+}
+
+.system-node-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.system-node-content {
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.system-arrow {
+  color: var(--accent);
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.system-loop-label {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-very-dim);
+  font-weight: 600;
+}
+
+/* BIG FIVE TABLE */
+.bigfive {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--card);
+}
+
+.bigfive-row {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.bigfive-row:last-child { border-bottom: none; }
+
+.bigfive-row.head { background: var(--card-elevated); }
+.bigfive-row.head > div { padding: 18px 22px; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text-dim); }
+.bigfive-row.head > div:first-child { color: var(--accent); }
+
+.bigfive-trait {
+  padding: 22px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  border-right: 1px solid var(--border);
+}
+
+.bigfive-high, .bigfive-low {
+  padding: 22px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-dim);
+}
+
+.bigfive-high { border-right: 1px solid var(--border); }
+
+/* UNIVERSALS */
+.universals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.universal-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.universal-card:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+
+.universal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.universal-body {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-dim);
+}
+
+/* ERRORS LIST */
+.errors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.error-card {
+  background: var(--card);
+  border-left: 3px solid var(--red);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  border-radius: 0 14px 14px 0;
+  padding: 28px 32px;
+  transition: all 0.3s ease;
+}
+
+.error-card:hover { background: var(--card-hover); }
+
+.error-num {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+
+.error-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.error-body {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+/* COMPARISON CARDS */
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.comparison-card {
+  border-radius: 18px;
+  padding: 36px;
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.comparison-card.bad {
+  background: var(--card);
+  border-color: rgba(217, 112, 112, 0.25);
+}
+
+.comparison-card.good {
+  background: var(--card);
+  border-color: rgba(95, 191, 115, 0.25);
+}
+
+.comparison-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.bad .comparison-label { color: var(--red); }
+.good .comparison-label { color: var(--green); }
+
+.comparison-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.comparison-body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+/* PRESCRIPTIONS LIST */
+.protocol {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 48px;
+}
+
+.protocol-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.protocol-item:last-child { border-bottom: none; }
+
+.protocol-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.protocol-content { padding-top: 4px; }
+
+.protocol-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.protocol-body {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+/* CLOSING */
+.closing {
+  text-align: center;
+  padding: 140px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.closing::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, var(--accent-glow) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.closing-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.closing-pre {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 32px;
+}
+
+.closing-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.15;
+  margin-bottom: 40px;
+  background: linear-gradient(180deg, var(--text) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.closing-body {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-dim);
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.closing-attribution {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-very-dim);
+  font-weight: 600;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 50px 24px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-very-dim);
+  font-weight: 600;
+}
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer a:hover { opacity: 0.7; }
+
+/* CALLOUT */
+.callout {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 14px 14px 0;
+  padding: 28px 36px;
+  margin: 36px 0;
+}
+
+.callout-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.callout-body {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .card-grid.three { grid-template-columns: repeat(2, 1fr); }
+  .card-grid.four { grid-template-columns: repeat(2, 1fr); }
+  .universals { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  section { padding: 70px 0; }
+  section.tight { padding: 50px 0; }
+  .hero { min-height: auto; padding: 100px 24px 80px; }
+  .hero-scroll { display: none; }
+
+  .card-grid.two, .card-grid.three, .card-grid.four { grid-template-columns: 1fr; }
+  .universals { grid-template-columns: repeat(2, 1fr); }
+  .comparison { grid-template-columns: 1fr; }
+  .errors-grid { grid-template-columns: 1fr; }
+
+  .card:hover, .universal-card:hover, .timeline-item:hover .timeline-dot::after { transform: none; }
+
+  .big-idea { padding: 36px 28px; }
+  .protocol { padding: 32px 24px; }
+
+  .mismatch-grid { grid-template-columns: 1fr; }
+  .mismatch-header { padding: 14px 18px; }
+  .mismatch-row-domain { padding: 18px; font-size: 15px; }
+  .mismatch-cell { padding: 18px; }
+
+  .bigfive-row { grid-template-columns: 1fr; }
+  .bigfive-row.head { display: none; }
+  .bigfive-trait { border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+  .bigfive-high, .bigfive-low { border-right: none; padding: 14px 22px; }
+  .bigfive-high::before { content: 'HIGH: '; font-size: 10px; letter-spacing: 2px; color: var(--green); font-weight: 700; }
+  .bigfive-low::before { content: 'LOW: '; font-size: 10px; letter-spacing: 2px; color: var(--blue); font-weight: 700; }
+
+  .timeline::before { left: 14px; }
+  .timeline-dot { left: 5px; }
+  .timeline-item { padding-left: 50px; }
+
+  .system-node { min-width: auto; width: 100%; padding: 18px 22px; }
+  .system-diagram { padding: 36px 20px; }
+
+  .closing { padding: 100px 24px; }
+}
+
+@media (max-width: 420px) {
+  body { font-size: 15px; }
+  .hero-label { font-size: 11px; letter-spacing: 2px; padding: 6px 12px; }
+  .card { padding: 26px 22px; }
+  .universals { grid-template-columns: 1fr; }
+  .quote-text { font-size: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">First Principles Guide</div>
+    <h1 class="hero-title">
+      Human Nature, <em>from the first humans</em> to right now.
+    </h1>
+    <p class="hero-subtitle">
+      A walk through the 3.5 billion years of evolution, 300,000 years of Homo sapiens, and the small set of drives and patterns that still run every human you will ever meet, including the one reading this.
+    </p>
+    <div class="hero-meta">
+      <span><span class="dot"></span>8 chapters</span>
+      <span><span class="dot"></span>~26,000 words distilled</span>
+      <span><span class="dot"></span>Updated 16. 5. 2026</span>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll to begin</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== THE THIRTY SECOND VERSION ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">The thirty-second version</span>
+    <h2 class="section-title">If you only read <em>one</em> thing.</h2>
+    <p class="section-lead">
+      Compressed paragraph that contains the entire model. Everything else in this page is evidence, structure, and application of what you are about to read.
+    </p>
+
+    <div class="big-idea">
+      <div class="big-idea-label">The Model</div>
+      <p class="big-idea-text">
+        Humans are <strong>biological organisms</strong> shaped by 3.5 billion years of evolution, finalized for hunter-gatherer life in the Pleistocene, now living in environments that have changed faster than evolution can keep up with. We run on a small set of <strong>universal drives</strong> (survival, reproduction, status, belonging, meaning, understanding, autonomy, comfort) inside a brain whose older emotional layers are faster and stronger than the newer reasoning layer. We cooperate at scale by sharing <strong>invented realities</strong>: money, gods, nations, brands, laws. The mismatch between our nature and our environment produces most modern dysfunction, and most of it can be addressed by changing inputs rather than fighting biology.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== FIVE CORE CLAIMS ===================== -->
+<section>
+  <div class="container">
+    <span class="section-label">The five core claims</span>
+    <h2 class="section-title">The whole document in <em>five sentences</em>.</h2>
+    <p class="section-lead">
+      If the paragraph above is too long, here are the five claims you can carry in your head. Each one is unpacked across an entire chapter in the source.
+    </p>
+
+    <div class="card-grid three" style="margin-bottom: 24px;">
+      <div class="card">
+        <span class="card-number">01</span>
+        <h3 class="card-title">You are a Pleistocene primate.</h3>
+        <p class="card-body">Your body and mind were finalized for a different world. Almost every reflex you have is calibrated against that world, not this one. Your fitness genes, your status anxiety, your tribal loyalty, your cravings. All Pleistocene defaults running on 21st century inputs.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">02</span>
+        <h3 class="card-title">Status is the master drive most adults will not admit.</h3>
+        <p class="card-body">A large fraction of behavior, including behavior dressed up as principle, is status competition. Most of what looks like ideology or preference is rank pursuit in disguise. Naming it stops it from running you.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">03</span>
+        <h3 class="card-title">Cooperation at scale requires shared fictions.</h3>
+        <p class="card-body">Money, brands, nations, laws. They are not lies. They are the technology that lets strangers cooperate. They work as long as enough people believe them. Civilization is fragile because its operating system is belief.</p>
+      </div>
+    </div>
+
+    <div class="card-grid two">
+      <div class="card">
+        <span class="card-number">04</span>
+        <h3 class="card-title">Most dysfunction is mismatch.</h3>
+        <p class="card-body">The body is fine. The inputs are wrong. Most modern problems (obesity, anxiety, depression, loneliness, distraction, polarization) are well-functioning ancestral systems responding correctly to inputs they were not built for. Change the inputs and most chronic modern problems improve.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">05</span>
+        <h3 class="card-title">The good life is not a default.</h3>
+        <p class="card-body">It has to be constructed deliberately, against ancient drives that no longer fit and modern environments that exploit them. The biology will not deliver flourishing by accident. The environment will not deliver it by default. Conscious participation is required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUOTE 1 ===================== -->
+<div class="container-narrow">
+  <div class="quote-block">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">Every drive, instinct, emotion, and preference a human has was selected for because it improved reproductive success in past environments, not because it makes the human happy or wise in the present.</p>
+    <div class="quote-cite">From Chapter 02. The Hardware</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ===================== HARDWARE / BRAIN ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">The hardware</span>
+    <h2 class="section-title">A brain built in <em>layers</em>, not from scratch.</h2>
+    <p class="section-lead">
+      Evolution is conservative. It builds on top of what is already there rather than starting over. Your brain is a stack of systems added across hundreds of millions of years, with newer functions running on older infrastructure. When &quot;what I should do&quot; and &quot;what I want to do&quot; fight, you are usually feeling that stack.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="card-grid three">
+      <div class="card">
+        <span class="card-tag tag-bio">Oldest layer</span>
+        <h3 class="card-title">Brainstem</h3>
+        <p class="card-body">Heart rate. Breathing. Body temperature. Sleep cycles. Reflexes. Shared with reptiles and fish. Runs without you. You cannot override it consciously beyond very narrow windows.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag tag-mind">Middle layer</span>
+        <h3 class="card-title">Limbic System</h3>
+        <p class="card-body">Amygdala, hippocampus, hypothalamus, basal ganglia. Shared with mammals. Generates emotion: fear, anger, attraction, disgust, joy. Faster than thought. Most &quot;gut reactions&quot; happen here, below awareness.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag tag-social">Newest layer</span>
+        <h3 class="card-title">Cortex</h3>
+        <p class="card-body">Reason, language, planning, social modeling, self-reflection. Especially the prefrontal cortex, behind your forehead. Not fully myelinated until age 25. Less powerful in conflict than people assume.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">The key asymmetry</div>
+      <p class="callout-body">The limbic system has more wiring projecting <em>up</em> into the cortex than the cortex has projecting <em>down</em>. Emotion biases reason more than reason biases emotion. This is a design feature, not a bug. It is also why willpower is unreliable: under stress, sleep loss, or hunger, prefrontal function drops and the older systems take over.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== TIMELINE / HISTORY ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">The story</span>
+    <h2 class="section-title">300,000 years of <em>Homo sapiens</em>, in phase transitions.</h2>
+    <p class="section-lead">
+      Each phase transition changed the conditions of human life enough that everything afterward was different. The biology did not change much. The environment did. Most of our current problems are downstream of the gap that opened between them.
+    </p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">7 million years ago</div>
+        <h4 class="timeline-title">The split from chimps</h4>
+        <p class="timeline-body">The human lineage diverges from the chimpanzee lineage. There is no single &quot;first human.&quot; A chain of hominid species follows: Australopithecus, Homo habilis, Homo erectus. Brains grow. Tools appear. Fire is controlled by roughly 1 million years ago.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">300,000 years ago</div>
+        <h4 class="timeline-title">Homo sapiens appears</h4>
+        <p class="timeline-body">We emerge in Africa. We are one of <strong>several human species</strong> on the planet, including Neanderthals and Denisovans. For 230,000 years we show no obvious cognitive supremacy.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">~70,000 years ago</div>
+        <h4 class="timeline-title">The Cognitive Revolution</h4>
+        <p class="timeline-body">Sudden flowering of art, ornament, refined tools, long-distance trade. Language gains the ability to reference abstractions and fictions. We gain the technology of <strong>shared imaginary realities</strong>, which lets us cooperate in groups larger than ~150. The other human species do not have this capability. Within tens of thousands of years, they are gone.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">70,000 to 12,000 years ago</div>
+        <h4 class="timeline-title">Hunter-gatherer life</h4>
+        <p class="timeline-body">Small bands of 30 to 50 people, tribal networks of ~150. Relatively egalitarian within bands. Status earned through skill. Animist worldview, ritual, oral storytelling. <strong>This is the world our psychology was tuned for.</strong> We are still those people, just in a different building.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">12,000 years ago</div>
+        <h4 class="timeline-title">The Agricultural Revolution</h4>
+        <p class="timeline-body">Cultivation begins independently in the Fertile Crescent, China, the Indus Valley, Mesoamerica, the Andes, and elsewhere. Surplus produces hierarchy, property, taxes, kings, armies, slavery, writing. Population explodes. Health declines for the average person. The first big stretching of the gap between our nature and our environment.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">5,000 years ago</div>
+        <h4 class="timeline-title">First civilizations</h4>
+        <p class="timeline-body">Sumer. Egypt. The Indus Valley. Shang China. Cities, temples, divine kings, codes of law, long-distance trade, organized warfare, slavery. Patterns that converge across cultures with no contact, because they are the solutions humans reach for under those conditions.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">800 to 200 BCE</div>
+        <h4 class="timeline-title">The Axial Age</h4>
+        <p class="timeline-body">Buddha. Confucius. Laozi. The Hebrew prophets. Zoroaster. Socrates, Plato, Aristotle, the Stoics. Independently, in widely separated civilizations, humans begin to ask in writing: <em>how should one live?</em> The traditions of this period still structure the moral and philosophical life of most humans alive today.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">500 BCE to 500 CE</div>
+        <h4 class="timeline-title">Classical empires</h4>
+        <p class="timeline-body">Persia, Maurya, Han China, Rome. The first polities governing tens of millions through standing armies, bureaucracy, codified law, paid roads. Universal religions emerge (Christianity, Buddhism spreading east) as the first scalable software for binding strangers into a moral community.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">500 to 1500 CE</div>
+        <h4 class="timeline-title">The medieval world</h4>
+        <p class="timeline-body">Islam emerges and spans Spain to Central Asia within a century. The Islamic Golden Age preserves Greek learning and advances mathematics and medicine. Song China invents paper money, printing, gunpowder. The Mongol Empire briefly connects Asia and Europe. The Black Death kills a third of Europe. Universities, parliaments, charters of rights begin to appear.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">1500 to 1800</div>
+        <h4 class="timeline-title">Scientific Revolution + Enlightenment</h4>
+        <p class="timeline-body">Copernicus. Galileo. Newton. The discovery that <strong>observation and math can overrule authority</strong> on factual claims. The Enlightenment extends the method to politics, law, religion, economics. Locke, Hume, Smith, Kant. Natural rights, government by consent, the idea of progress. The modern world is born in its values before it is born in its conditions.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">1750 to 1900</div>
+        <h4 class="timeline-title">Industrial Revolution</h4>
+        <p class="timeline-body">Steam, coal, iron, electricity. Energy densities no prior society had access to. Productivity rises by orders of magnitude. Cities explode. Family structure changes. Slavery is abolished across the Atlantic world. Europe colonizes most of the planet by 1900. The material world reshapes faster than at any prior moment.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">The 20th century</div>
+        <h4 class="timeline-title">Ideologies, decolonization, IT, mass life expectancy</h4>
+        <p class="timeline-body">Communism, fascism, liberal democracy compete. Liberal democracy plus markets emerges dominant by 1991. Empires dissolve. Antibiotics, vaccines, sanitation push life expectancy from 45 to 75 in industrialized countries. Two existential technologies appear: nuclear weapons, then biotechnology. The gap between human nature and human environment widens beyond anything prior.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">Now</div>
+        <h4 class="timeline-title">A phase transition in progress</h4>
+        <p class="timeline-body">Globalization peaks and partially reverses. Smartphones connect most of humanity. Social media measurably hurts adolescent mental health. AI emerges as a general-purpose technology, reshaping software and knowledge work in real time. Climate change is in the data, not the forecast. Geopolitical tensions higher than any point since the Cold War. The drives have not changed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUOTE 2 ===================== -->
+<div class="container-narrow">
+  <div class="quote-block">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">We are still those people. Just in a different building.</p>
+    <div class="quote-cite">From Chapter 03. The Story</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ===================== THE DRIVES ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">The drives</span>
+    <h2 class="section-title">Eight motivations that explain <em>most adult behavior</em>.</h2>
+    <p class="section-lead">
+      Cultural surface varies dramatically across centuries and continents. The underlying drives are remarkably stable. All eight are active simultaneously in any adult life, weighing against each other in moment-to-moment decisions. Predicting human behavior means asking <strong>which drive is dominant right now</strong> and what the others are doing in the background.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="card-grid two" style="margin-bottom: 24px;">
+      <div class="card">
+        <span class="card-tag tag-bio">Drive 01</span>
+        <h3 class="card-title">Survival</h3>
+        <p class="card-body">Air, water, food, warmth, sleep, safety from immediate threat. When unmet, almost nothing else matters. In modern industrialized societies these are met by default for most people. The system still scans for threats it cannot find and manufactures substitutes: a snippy email, a news headline, a social slight.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag tag-bio">Drive 02</span>
+        <h3 class="card-title">Reproduction and sex</h3>
+        <p class="card-body">The most obvious evolutionary drive and the least openly discussed. Hardwired below conscious awareness. An enormous amount of human display, accomplishment, competition, and creative production is mating-related, even when the performer would not describe it that way.</p>
+      </div>
+    </div>
+
+    <div class="card-grid two" style="margin-bottom: 24px;">
+      <div class="card" style="border-color: var(--accent); background: linear-gradient(135deg, var(--card) 0%, var(--accent-glow) 100%);">
+        <span class="card-tag tag-master">The master drive</span>
+        <h3 class="card-title">Drive 03. Status</h3>
+        <p class="card-body">Your rank within the group you care about. The most powerful and least admitted driver of adult behavior. Higher-status individuals in social mammals live longer, eat better, have more mates, and show lower stress markers. Status drops trigger depression more reliably than almost any other single event. <strong>Most of what people do, including a lot of what they call principle, is status competition in disguise.</strong></p>
+      </div>
+      <div class="card">
+        <span class="card-tag tag-social">Drive 04</span>
+        <h3 class="card-title">Belonging and tribe</h3>
+        <p class="card-body">Humans evolved as group animals. Solitary humans throughout history were almost always dead, exiled, or in extreme abnormal conditions. Loneliness is physically painful. Chronic social isolation predicts mortality at rates comparable to smoking. The drive forms tribes around any reliable identity marker: language, dress, religion, sports team, political party, profession.</p>
+      </div>
+    </div>
+
+    <div class="card-grid two" style="margin-bottom: 24px;">
+      <div class="card">
+        <span class="card-tag tag-mind">Drive 05</span>
+        <h3 class="card-title">Meaning and significance</h3>
+        <p class="card-body">Once basic needs are met, meaning becomes the bottleneck. Three sources are well documented: belonging to something larger than oneself, contributing through effort, and having a coherent narrative about your life. When all three are present, meaning is high. When any is missing, meaning falters.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag tag-mind">Drive 06</span>
+        <h3 class="card-title">Understanding and mastery</h3>
+        <p class="card-body">Curiosity in its surface form, mastery in its longer form. Tied to dopamine reward when prediction succeeds or skilled action lands. Curiosity is fragile, extinguished by tedium, humiliation, or premature answers. Mastery requires deliberate practice at the edge of current ability. The foundation of every human accomplishment in science, art, craft, and sport.</p>
+      </div>
+    </div>
+
+    <div class="card-grid two">
+      <div class="card">
+        <span class="card-tag tag-social">Drive 07</span>
+        <h3 class="card-title">Autonomy and control</h3>
+        <p class="card-body">The desire to be the cause of your own actions, not the object of someone else's. Cross-culturally stable. Workplace autonomy predicts satisfaction more reliably than salary above a threshold. The autonomy drive is in tension with belonging; healthy adult life is a negotiation between the two.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag tag-risk">Drive 08</span>
+        <h3 class="card-title">Comfort and pleasure</h3>
+        <p class="card-body">The simplest drive, and the one our modern environment hijacks most successfully. The dopamine reward system evolved to teach the brain &quot;this is worth pursuing.&quot; In abundance, that system gets hijacked by engineered foods, algorithmic feeds, gambling, pornography. The drive is not pathological. The environment changed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUOTE 3 ===================== -->
+<div class="container-narrow">
+  <div class="quote-block">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">Status is the single most underestimated driver of adult human behavior. Most of what people do, including a lot of what they think is principled, is status competition in disguise.</p>
+    <div class="quote-cite">From Chapter 04. The Drives</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ===================== THE UNIVERSALS ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">The universals</span>
+    <h2 class="section-title">Traits found in <em>every human society</em> ever studied.</h2>
+    <p class="section-lead">
+      In 1991, anthropologist Donald Brown published a list of human universals. Hundreds of items shared across every culture carefully observed. If a feature shows up in pre-agricultural hunter-gatherers, ancient Sumerian cities, medieval China, and modern Manhattan, it is part of human nature, not a cultural accident.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="universals">
+      <div class="universal-card"><div class="universal-title">Language</div><p class="universal-body">Grammar with nouns and verbs. Tense or its equivalents. Logical operators (and, not, true, false). Translation always possible.</p></div>
+      <div class="universal-card"><div class="universal-title">Music + dance</div><p class="universal-body">Group song. Rhythm. Dance. Lullabies. Music tied to ritual.</p></div>
+      <div class="universal-card"><div class="universal-title">Family + kinship</div><p class="universal-body">Marriage in some form. Incest taboos. Pair bonding. Mother, father, child roles. Extended kin networks.</p></div>
+      <div class="universal-card"><div class="universal-title">Sex + reproduction</div><p class="universal-body">Sexual jealousy. Modesty about some behaviors. Concepts of beauty. Pubertal customs.</p></div>
+      <div class="universal-card"><div class="universal-title">Politics + law</div><p class="universal-body">Leadership. Conflict resolution. Property. Inheritance. Rules. Punishment.</p></div>
+      <div class="universal-card"><div class="universal-title">Religion + ritual</div><p class="universal-body">Belief in supernatural agents. Rituals around birth, death, transitions. Magical thinking. Concepts of soul or spirit.</p></div>
+      <div class="universal-card"><div class="universal-title">Morality</div><p class="universal-body">Fairness sense. Reciprocity. Empathy. In-group vs out-group moral standards.</p></div>
+      <div class="universal-card"><div class="universal-title">Aesthetics</div><p class="universal-body">Body decoration. Visual art. Concepts of beauty. Color terms.</p></div>
+      <div class="universal-card"><div class="universal-title">Tools</div><p class="universal-body">Tool use. Tool-making. Containers. Cooking. Fire. Weapons. Clothing.</p></div>
+      <div class="universal-card"><div class="universal-title">Economic life</div><p class="universal-body">Exchange. Specialization by sex and age. Reciprocal gift-giving. Trade. Property.</p></div>
+      <div class="universal-card"><div class="universal-title">Knowledge</div><p class="universal-body">Folk biology. Folk physics. Folk psychology. Beliefs about death and disease.</p></div>
+      <div class="universal-card"><div class="universal-title">Social structure</div><p class="universal-body">In-group vs out-group. Status hierarchies. Sanctions. Distinct gender roles.</p></div>
+    </div>
+
+    <div class="callout" style="margin-top: 60px;">
+      <div class="callout-label">What this means</div>
+      <p class="callout-body">Religion, hierarchy, gender roles, property, art, storytelling, and conflict are <em>universal in form, varied in detail</em>. No society without supernatural beliefs has ever been documented. No society without status differences either. The strict 20th-century claims that gender is fully constructed or that property is artificial are not supported by the cross-cultural record. The opposite biological-determinist claims also fail. Both biology and culture are real, and both do meaningful work.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== THE BIG FIVE ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">Individual variation</span>
+    <h2 class="section-title">Within the universals, the <em>Big Five</em>.</h2>
+    <p class="section-lead">
+      Five dimensions of personality replicated across many cultures and languages. Each is roughly 40 to 60 percent heritable. Largely stable from late adolescence onward. The trait is your starting place, not your identity. Working with it beats fighting it.
+    </p>
+
+    <div class="bigfive">
+      <div class="bigfive-row head">
+        <div>Trait</div>
+        <div>High end looks like</div>
+        <div>Low end looks like</div>
+      </div>
+      <div class="bigfive-row">
+        <div class="bigfive-trait">Openness</div>
+        <div class="bigfive-high">Curious, imaginative, drawn to novelty and abstraction. Artistic interests. Often politically liberal.</div>
+        <div class="bigfive-low">Practical, conventional, prefers familiar. Less interested in abstractions.</div>
+      </div>
+      <div class="bigfive-row">
+        <div class="bigfive-trait">Conscientiousness</div>
+        <div class="bigfive-high">Disciplined, organized, reliable, future-oriented, hardworking. Predicts academic and career success.</div>
+        <div class="bigfive-low">Flexible, spontaneous, less focused on planning or schedules.</div>
+      </div>
+      <div class="bigfive-row">
+        <div class="bigfive-trait">Extraversion</div>
+        <div class="bigfive-high">Energized by social contact. Talkative, assertive, seeks stimulation.</div>
+        <div class="bigfive-low">Reserved, prefers solitude. Lower social energy. Not the same as social anxiety.</div>
+      </div>
+      <div class="bigfive-row">
+        <div class="bigfive-trait">Agreeableness</div>
+        <div class="bigfive-high">Cooperative, trusting, warm, conflict-averse. Predicts cooperative relationships.</div>
+        <div class="bigfive-low">Competitive, skeptical, willing to be unpopular. Direct.</div>
+      </div>
+      <div class="bigfive-row">
+        <div class="bigfive-trait">Neuroticism</div>
+        <div class="bigfive-high">Prone to negative emotion, anxiety, mood swings. Threat sensitivity. Predicts mental health risk.</div>
+        <div class="bigfive-low">Emotionally stable. Less reactive. Calmer under stress.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== THE MISMATCH ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">The mismatch</span>
+    <h2 class="section-title">Evolved nature against <em>modern environment</em>.</h2>
+    <p class="section-lead">
+      <strong>Mismatch theory</strong> is the single most useful lens for modern psychological dysfunction. Most chronic problems are not pathologies of the system. They are the predictable response of a well-functioning ancestral system to inputs it was not built for. The biology is stable. The environment changed. Interventions that move the environment closer to ancestral conditions tend to work.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="mismatch-grid">
+      <div class="mismatch-header header-domain">Domain</div>
+      <div class="mismatch-header header-ancient">Ancestral expectation</div>
+      <div class="mismatch-header header-modern">Modern reality</div>
+
+      <div class="mismatch-row-domain">Food</div>
+      <div class="mismatch-cell ancient">Calorie scarcity. Diverse foraged diet. Hard to get, high fiber, seasonal. Body evolved to crave calorie density and store fat aggressively.</div>
+      <div class="mismatch-cell modern">Cheap, 24/7, engineered for palatability. Refined sugar and fat. Low fiber. Year-round. Result: epidemic obesity, type 2 diabetes, fatty liver disease.</div>
+
+      <div class="mismatch-row-domain">Movement</div>
+      <div class="mismatch-cell ancient">Roughly 10 kilometers per day. Daily physical activity non-negotiable for survival. Cardiovascular, musculoskeletal, metabolic systems all expect it.</div>
+      <div class="mismatch-cell modern">8 to 12 hours of sitting per day. Back pain, joint problems, sarcopenia, cardiovascular disease, metabolic syndrome, mood disorders.</div>
+
+      <div class="mismatch-row-domain">Light + sleep</div>
+      <div class="mismatch-cell ancient">Bright sun during the day. Total darkness at night. Biphasic flexible sleep. Circadian system calibrated against the sun.</div>
+      <div class="mismatch-cell modern">Indoor life with low daytime light. Blue-spectrum screens at night. Late bedtimes. Alarm-driven wakes. Chronic partial sleep deprivation.</div>
+
+      <div class="mismatch-row-domain">Social density</div>
+      <div class="mismatch-cell ancient">Bands of 30 to 50 people, networks of ~150. You knew everyone you saw. You were never anonymous. The brain expects relationships at depth.</div>
+      <div class="mismatch-cell modern">Cities of millions. Daily exposure to thousands of faces, mostly strangers. Loneliness in crowds. The brain treats most encounters as low-trust.</div>
+
+      <div class="mismatch-row-domain">Information</div>
+      <div class="mismatch-cell ancient">Scarce. From people you knew. Attached to immediate consequences. Stories repeated by tellers you could see. Novel input was rare.</div>
+      <div class="mismatch-cell modern">Infinite. Mostly strangers. Decoupled from consequences. Algorithmic feeds optimize for engagement, which usually means emotional activation.</div>
+
+      <div class="mismatch-row-domain">Status visibility</div>
+      <div class="mismatch-cell ancient">Reference group was your band and surrounding bands. You compared yourself to people whose lives you knew. Bounded competition.</div>
+      <div class="mismatch-cell modern">Reference group is whoever is in your feed. Professional athletes, billionaires, celebrities, curated peer highlight reels. Comparison runs against an impossible distribution.</div>
+
+      <div class="mismatch-row-domain">Chronic threat</div>
+      <div class="mismatch-cell ancient">Threats were acute and identifiable. Lions, rivals, illness. Stress response spiked, mobilized action, then resolved.</div>
+      <div class="mismatch-cell modern">Threats are abstract, chronic, unresolvable. Financial uncertainty, career instability, news cycles, climate change. The stress cycle never completes. Burnout.</div>
+
+      <div class="mismatch-row-domain">Meaning</div>
+      <div class="mismatch-cell ancient">Provided by default. Tribe, role, worldview, ancestors, concrete contribution. The system did not have to be built.</div>
+      <div class="mismatch-cell modern">None of this supplied. Tribes must be built. Worldviews chosen. Roles not inherited. Contribution abstract and often anonymous. Meaning vacuum.</div>
+
+      <div class="mismatch-row-domain">Mating market</div>
+      <div class="mismatch-cell ancient">Limited known pool. Pair-bonding incentivized for both sexes by child-rearing demands. Trade-offs visible over time.</div>
+      <div class="mismatch-cell modern">App-mediated unlimited pool. Dynamics favor a small fraction of men and women. Higher singleness, later marriage, lower birth rates, mating dissatisfaction across sexes.</div>
+
+      <div class="mismatch-row-domain">Novelty</div>
+      <div class="mismatch-cell ancient">Rare and usually significant. New territory, tool, person, situation. The dopamine system marked novelty as worth attending to.</div>
+      <div class="mismatch-cell modern">Infinite and engineered. New content every few seconds. Dopamine overload. Diminished reward from natural sources. Constant low-grade stimulation hunger.</div>
+    </div>
+
+    <div class="callout" style="margin-top: 48px;">
+      <div class="callout-label">The pattern</div>
+      <p class="callout-body">Each row is the same story. An ancient system optimized for one environment is now receiving inputs from a different one. The dysfunction is not random. It is the systematic output of a well-functioning ancient program running on inputs it was not built for. <em>The biology is fine. The inputs are wrong.</em></p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== SYSTEM DIAGRAM ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">The model</span>
+    <h2 class="section-title">The system you are <em>actually</em> running.</h2>
+    <p class="section-lead">
+      A slightly richer picture of the model as a system with parts that interact. Arrows are bidirectional in practice. Behavior shapes the environment. Outcomes shape the brain. Shared fictions become part of the environment. The system is recursive.
+    </p>
+
+    <div class="system-diagram">
+      <div class="system-flow">
+        <div class="system-node">
+          <span class="system-node-label">Layer 01</span>
+          <div class="system-node-content">Environment<br><span style="color: var(--text-very-dim); font-size: 13px;">physical, technological, cultural</span></div>
+        </div>
+        <div class="system-arrow">&darr;</div>
+        <div class="system-node">
+          <span class="system-node-label">Layer 02</span>
+          <div class="system-node-content">Evolved Hardware<br><span style="color: var(--text-very-dim); font-size: 13px;">body + brain (limbic + cortex)</span></div>
+        </div>
+        <div class="system-arrow">&darr;</div>
+        <div class="system-node">
+          <span class="system-node-label">Layer 03</span>
+          <div class="system-node-content">Universal Drives<br><span style="color: var(--text-very-dim); font-size: 13px;">survival, sex, status, belonging, meaning, mastery, autonomy, comfort</span></div>
+        </div>
+        <div class="system-arrow">&darr;</div>
+        <div class="system-node">
+          <span class="system-node-label">Layer 04</span>
+          <div class="system-node-content">Shared Fictions<br><span style="color: var(--text-very-dim); font-size: 13px;">money, gods, nations, brands, laws, contracts</span></div>
+        </div>
+        <div class="system-arrow">&darr;</div>
+        <div class="system-node">
+          <span class="system-node-label">Layer 05</span>
+          <div class="system-node-content">Behavior<br><span style="color: var(--text-very-dim); font-size: 13px;">individual + collective</span></div>
+        </div>
+        <div class="system-arrow">&darr;</div>
+        <div class="system-node">
+          <span class="system-node-label">Layer 06</span>
+          <div class="system-node-content">Outcomes + Feedback<br><span style="color: var(--text-very-dim); font-size: 13px;">becomes the environment again</span></div>
+        </div>
+      </div>
+      <div class="system-loop-label">&uarr; Loop closes &uarr;</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== THE FIVE ERRORS ===================== -->
+<section>
+  <div class="container">
+    <div class="container-narrow" style="padding: 0;">
+      <span class="section-label">Common mistakes</span>
+      <h2 class="section-title">Five errors that will <em>trip you up</em>.</h2>
+      <p class="section-lead">
+        When you start exploring human nature, you will encounter these failure patterns. Each one is half-right and dangerous when taken as a full explanation. Naming them in advance prevents most of the damage.
+      </p>
+    </div>
+
+    <div class="errors-grid">
+      <div class="error-card">
+        <div class="error-num">Error 01</div>
+        <h4 class="error-name">The blank slate</h4>
+        <p class="error-body">The claim that humans are born with no predispositions and that all behavior comes from culture. Largely false. We are born with rich evolved predispositions: face preference, language acquisition order, fear of snakes, moral intuitions. Culture builds on this scaffolding, sometimes dramatically. It does not write on an empty page.</p>
+      </div>
+      <div class="error-card">
+        <div class="error-num">Error 02</div>
+        <h4 class="error-name">Biological determinism</h4>
+        <p class="error-body">The opposite mistake. The claim that biology fully determines behavior and culture is decoration. Also false. Biology sets ranges and defaults. Within those ranges, culture has enormous power. Both are real, and you need both to explain anything.</p>
+      </div>
+      <div class="error-card">
+        <div class="error-num">Error 03</div>
+        <h4 class="error-name">The noble savage</h4>
+        <p class="error-body">The idea that pre-civilized humans lived in peace and that civilization corrupted us. Hunter-gatherer life had real strengths: egalitarianism, healthy nutrition, strong bonds. It also had homicide rates that would horrify a modern city, frequent warfare, high child mortality, no medicine. It was not Eden.</p>
+      </div>
+      <div class="error-card">
+        <div class="error-num">Error 04</div>
+        <h4 class="error-name">Modern people are different</h4>
+        <p class="error-body">The mirror image. The claim that we are categorically different from people 2,000 or 20,000 years ago because of iPhones or science. Wrong. Human biology has barely changed. The deep psychology of a Bronze Age farmer is essentially ours. Read Homer. You will recognize yourself.</p>
+      </div>
+      <div class="error-card">
+        <div class="error-num">Error 05</div>
+        <h4 class="error-name">One driver explains everything</h4>
+        <p class="error-body">The temptation to reduce behavior to one master variable. Sex, money, status, fear of death, power, class struggle, rational choice. Every major theorist who tried this is partly right and largely wrong. Human behavior is overdetermined. Multiple drives are always active. A theory that reduces everything to one will miss most of the picture.</p>
+      </div>
+      <div class="error-card">
+        <div class="error-num">Bonus</div>
+        <h4 class="error-name">Romanticizing the future</h4>
+        <p class="error-body">Progress is real but not guaranteed. Technology does not automatically improve human wellbeing. Recent technologies (engineered food, social media, dating apps) have produced significant new harms alongside their benefits. Assume the next technology will too, even if you like it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== COMPARISON: WHAT CHANGES ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">Stability and change</span>
+    <h2 class="section-title">What history <em>changes</em>, what it <em>doesn't</em>.</h2>
+    <p class="section-lead">
+      Most stable features of your current life depend on continued operation of cooperation infrastructure. Most stable features of your inner life depend on continued operation of your biology. Plan for the second to be more reliable than the first.
+    </p>
+
+    <div class="comparison">
+      <div class="comparison-card bad">
+        <div class="comparison-label">Has changed dramatically</div>
+        <h3 class="comparison-title">Conditions</h3>
+        <p class="comparison-body">
+          Material conditions (food, shelter, medicine, transport). Communication speed. Average lifespan and infant mortality. Slavery, formal hierarchy, gender expectations. Political institutions (democracy, citizenship, rights). Religious landscape. Average violence rates.
+          <br><br>
+          All of these have shifted enormously over centuries. Most of what feels permanent about your current society is recent and contingent.
+        </p>
+      </div>
+      <div class="comparison-card good">
+        <div class="comparison-label">Has stayed essentially the same</div>
+        <h3 class="comparison-title">Nature</h3>
+        <p class="comparison-body">
+          The drives: status, sex, belonging, meaning, comfort. The basic emotional palette. Cognitive architecture (limbic faster than cortex, mostly unconscious decisions). The need for tribe and ritual. Patterns of cooperation and defection. Rise-and-fall dynamics in civilizations. The reality of compounding asymmetries.
+          <br><br>
+          These have been stable for thousands of years and will be stable for the foreseeable future.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUOTE 4 ===================== -->
+<div class="container-narrow">
+  <div class="quote-block">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">Civilization is a technology for cooperating at scale despite our nature. It is real, it is fragile, and it is not guaranteed to continue.</p>
+    <div class="quote-cite">From the Index. The thirty-second version</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ===================== THE PROTOCOL ===================== -->
+<section>
+  <div class="container-narrow">
+    <span class="section-label">The minimum viable protocol</span>
+    <h2 class="section-title">Ten <em>infrastructure</em> habits.</h2>
+    <p class="section-lead">
+      Most adult life optimization is not adding more. It is removing the wrong inputs and rebuilding the right ones. Most of what passes for clinical mental health treatment is making people functional enough to do approximately these things. If you can do them directly, you compress months of intervention into a self-managed protocol.
+    </p>
+
+    <div class="protocol">
+      <div class="protocol-item">
+        <div class="protocol-num">01</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Sleep</h4>
+          <p class="protocol-body">Consistent schedule. Dark bedroom. No screens an hour before bed. Morning sunlight. Aim for 7 to 9 hours. The single highest-leverage intervention in modern health.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">02</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Movement</h4>
+          <p class="protocol-body">Walk daily, ideally outdoor. Resistance training twice a week. Avoid sitting more than 30 to 60 minutes without standing. The body interprets prolonged inactivity as a survival signal that conditions are bad.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">03</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Food</h4>
+          <p class="protocol-body">Whole foods most of the time. Restrict ultra-processed food at the source by not buying it. Adequate protein. Fiber. The fix is not &quot;eat less.&quot; The fix is changing the food environment.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">04</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Light</h4>
+          <p class="protocol-body">Bright light in the morning, ideally outdoor within an hour of waking. Dim light in the evening. Outdoor time every day. The circadian system is calibrated against the sun.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">05</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Connection</h4>
+          <p class="protocol-body">Two to four close relationships maintained actively. A weekly in-person ritual with someone you care about. Solitary humans deteriorate. This is not optional. This is the substrate.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">06</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Information diet</h4>
+          <p class="protocol-body">Sharp limits on feed-based content. Replace with chosen sources: books, specific creators, long-form. Phone outside the bedroom. Build the capacity for boredom back. It is the substrate of creativity.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">07</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Status</h4>
+          <p class="protocol-body">Choose your hierarchies deliberately. Curate your feed to remove unproductive comparisons. Inventory the status games you are playing. Decide which to invest in, which to exit.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">08</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Meaning</h4>
+          <p class="protocol-body">A practice or project you find inherently worthwhile, protected on the calendar. Most adults underweight meaning in favor of urgent demands. The cost is delayed and severe.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">09</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Stress recovery</h4>
+          <p class="protocol-body">Real rest, not media consumption. Walks. Time in nature. Sleep. Sauna. Breath work. Whatever closes the stress cycle for you. Modern life keeps reopening it. You have to close it deliberately.</p>
+        </div>
+      </div>
+      <div class="protocol-item">
+        <div class="protocol-num">10</div>
+        <div class="protocol-content">
+          <h4 class="protocol-title">Mating</h4>
+          <p class="protocol-body">Treat your relationship or pursuit of one as a serious life project, not a hobby. Avoid substitutes that drain the drive without satisfying it. The infrastructure for stable pair bonds has weakened. Conscious construction is required.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 36px;">
+      <div class="callout-label">If you do these consistently for three months</div>
+      <p class="callout-body">You will feel like a different person. This is not a guarantee against serious mental illness, which often has biological components requiring treatment. It is the substrate on which good mental health rests. The substrate has been quietly subtracted by modern life. <em>Reinstating it is the highest-leverage personal intervention available.</em></p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===================== QUOTE 5 ===================== -->
+<div class="container-narrow">
+  <div class="quote-block">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">Cultivate what your biology wants. Override what your environment exploits.</p>
+    <div class="quote-cite">From Chapter 07. The Synthesis</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ===================== UNCERTAINTY ===================== -->
+<section class="tight">
+  <div class="container-narrow">
+    <span class="section-label">What the model does not solve</span>
+    <h2 class="section-title">Where this model is <em>uncertain</em>.</h2>
+    <p class="section-lead">
+      A good model names its own limits. Some honest uncertainties to carry alongside what the rest of the document claims confidently.
+    </p>
+
+    <div class="card-grid two">
+      <div class="card">
+        <h3 class="card-title">The cognitive revolution mechanism</h3>
+        <p class="card-body">Was it genetic, cultural, or both? The evidence is suggestive but not conclusive. The leading hypotheses converge on a small genetic shift unlocking a capacity that required cultural critical mass to express, but the specifics are open.</p>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Consciousness itself</h3>
+        <p class="card-body">None of the models in the source touch the hard problem. Why subjective experience exists at all remains open, and most of what we say about psychology is silent on it.</p>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Genes vs environment, in any specific case</h3>
+        <p class="card-body">Population-level heritability estimates do not translate cleanly to individual cases. Knowing that a trait is 50 percent heritable in a population tells you almost nothing about what is possible for a specific person.</p>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Humans deeply embedded in artificial environments</h3>
+        <p class="card-body">People who have grown up entirely online may have differently calibrated drives. We do not yet know what that looks like at population scale. The current adolescent mental health crisis is the early data.</p>
+      </div>
+      <div class="card">
+        <h3 class="card-title">AI's effect on cooperation infrastructure</h3>
+        <p class="card-body">Money, contracts, brands, identity. All may be transformed by AI in the next 10 to 20 years. The drives will not change. The institutions that channel them will.</p>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Whether the rise-and-fall cycle has the same shape now</h3>
+        <p class="card-body">History suggests cycles. The current moment is unlike any prior one in some specific ways: global connectivity, technological acceleration. The cycle may compress, stretch, or change form.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 36px; font-size: 15px; color: var(--text-very-dim); line-height: 1.6; text-align: center; font-style: italic; font-family: 'Playfair Display', serif;">
+      The model is robust enough to bet on. It is not robust enough to claim certainty. Use it accordingly.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== CLOSING ===================== -->
+<section class="closing">
+  <div class="closing-inner">
+    <div class="closing-pre">Closing</div>
+    <h2 class="closing-title">You are a biological organism with finite time and a set of drives that, properly fed, can produce flourishing.</h2>
+    <p class="closing-body">
+      The drives, properly understood, can also produce a life that looked busy and felt empty. You have roughly 4,000 weeks in an average adult life, plus or minus, and you have spent a substantial fraction of them already. The remaining ones are finite and not refundable.
+      <br><br>
+      This is not a depressing observation. It is a clarifying one. The drives that are loudest in any moment are not always the drives that matter on a 30-year time horizon. The status game that consumes you now will be irrelevant in 10 years. The relationships you are neglecting now will be the ones you wish you had cultivated. The contribution you keep postponing is the one you will regret.
+    </p>
+    <div class="closing-attribution">Use the model. Add to it. Update it when reality demands.</div>
+  </div>
+</section>
+
+<footer class="footer">
+  Generated from <a href="./index.md">Context/Knowledge/topics/humanity/human-nature/</a> &nbsp;&middot;&nbsp; 16. 5. 2026
+</footer>
+
+</body>
+</html>
