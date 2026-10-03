@@ -10,4 +10,4 @@ Live: https://amadejdemsar-create.github.io/human-nature/
   first visit defaults to the browser language. Single URL, in-place switch.
 - Slovenian text produced via a native transcreation + independent native-review
   pass (not literal translation).
-- Source of truth for the essay: `~/Domain/Knowledge/topics/humanity/human-nature/`.
+- Source of truth for the essay: `~/Domain/SecondBrain/Knowledge/topics/humanity/human-nature/`.
