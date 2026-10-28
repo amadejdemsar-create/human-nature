@@ -9,7 +9,7 @@ source: synthesis (Maslow, Deci & Ryan, McClelland, Buss, Pinker, Sapolsky, Haid
 created: 2026-05-16
 pages: null
 pages_read: null
-checked: 2026-10-28
+updated: 2026-10-28
 ---
 
 # 04 The Drives: What Actually Motivates Humans
@@ -335,39 +335,6 @@ The drives that produce flourishing in modern life are mastery, meaning, belongi
 ---
 
 ## Sources
-
-**Status:** synthesis written 16. 5. 2026, each load-bearing claim checked against the sources below on 28. 10. 2026. Re-check by 28. 10. 2027.
-
-### Claims checked
-
-| § | Claim as first written | Result | Sources |
-|---|---|---|---|
-| intro | The single most underestimated point in this chapter, repeated for emphasis: status is the … | narrowed | Anderson et al. 2015, Tay and Diener 2011, Storr 2021 |
-| 4.12 | Status is the most powerful and least admitted driver of adult behavior. Most of … | narrowed | Anderson et al. 2015, Tay and Diener 2011 |
-| 4.1 | Wrong as a literal hierarchy. People pursue belonging and esteem while hungry. People pursue … | supported | Wahba and Bridwell 1976, Tay and Diener 2011 |
-| 4.1 | The three needs are robust across cultures and predict wellbeing well. | refined | Chen et al. 2015 |
-| 4.1 | The framework I will use in this chapter is a synthesis. Eight major drives, … | narrowed | Chen et al. 2015, Lawrence and Nohria 2001, Ryan and Deci 2000, Reiss 2026 |
-| 4.4 | Mate selection is heavily influenced by signals of fertility (for men assessing women) and … | supported | Buss 1989, Walter et al. 2020, Zentner and Mitura 2012 |
-| 4.4 | Beauty standards have universal components (symmetry, indicators of youth and health, hip-to-waist ratio, facial … | corrected | Yu and Shepard 1998, Walter et al. 2020 |
-| 4.4 | Jealousy is universal. Patterns of jealousy (sexual versus emotional) differ on average between men … | supported | Sagarin et al. 2012 |
-| 4.5 | Higher-status individuals in social mammals have more access to mates, more access to food, … | corrected | Sapolsky 2005, von Rueden et al. 2011 |
-| 4.5 | Status drops are one of the most reliable triggers of clinical depression. | corrected | Anderson et al. 2015, Dickerson and Kemeny 2004, Siddaway 2015, Shively 2005, Williams 2025 |
-| 4.3 | The body responds to social threat with the same chemistry as physical threat. | refined | Dickerson and Kemeny 2004, van der Kolk 2014 |
-| 4.5 | A villager in a poor country whose neighbors all live similarly often reports higher … | corrected | Stevenson and Wolfers 2013, Kahneman 2011 |
-| 4.5 | Status hierarchies form spontaneously in any group. Within hours, in laboratory studies and field … | narrowed | Anderson et al. 2015, Anderson and Kilduff 2009, Mattan et al. 2017, Cheng 2013 |
-| 4.5 | You will be right about three quarters of the time. | removed | none found |
-| 4.6 | Loneliness is physically painful. The same brain regions activate as in physical pain. | refined | Eisenberger et al. 2003, Woo et al. 2014 |
-| 4.6 | Chronic social isolation predicts mortality at rates comparable to smoking. | refined | Holt-Lunstad et al. 2010 |
-| 4.6 | Dunbar's number (roughly 150) is the upper bound of stable personal relationships humans can … | corrected | Lindenfors 2021, Hill 2011 |
-| 4.7 | People who report high sense of meaning have lower rates of depression and anxiety, … | narrowed | Cohen et al. 2016, Frankl 1946 |
-| 4.8 | The brain gets a hit when it successfully predicts something (curiosity satisfied) or successfully … | corrected | Schultz 1997, Lieberman and Long 2018 |
-| 4.8 | Approaching a domain as one in which you can grow produces faster growth than … | narrowed | Sisk et al. 2018 |
-| 4.8 | Mastery requires deliberate practice. Casual repetition is not enough. | refined | Macnamara et al. 2014 |
-| 4.8 | This is one of the most reliably reproducible findings in psychology, going back to … | narrowed | Fong et al. 2015 |
-| 4.9 | Workplace autonomy (control over how, when, and where work happens) predicts job satisfaction and … | narrowed | Humphrey et al. 2007, Judge et al. 2010 |
-| 4.9 | The most psychologically harmful forms of poverty are not the poorest, but those with … | removed | Kahneman 2011 |
-| 4.10 | In the modern environment, that system gets hijacked by: | narrowed | Lieberman and Long 2018, Lustig 2012, van Tulleken 2023, Panova and Carbonell 2018 |
-| Applied: Self | The single best predictor of engaged old age is sustained curiosity. | narrowed | Swan and Carmelli 1996 |
 
 ### Books
 

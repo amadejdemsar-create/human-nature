@@ -8,7 +8,7 @@ source: synthesis (Harari, Diamond, Durant, McNeill, Pinker, Henrich, Turchin)
 created: 2026-05-16
 pages: null
 pages_read: null
-checked: 2026-10-28
+updated: 2026-10-28
 ---
 
 # 03 The Story: 300,000 Years of Humans
@@ -360,38 +360,6 @@ Specific personal applications:
 ---
 
 ## Sources
-
-**Status:** synthesis written 16. 5. 2026, each load-bearing claim checked against the sources below on 28. 10. 2026. Re-check by 28. 10. 2027.
-
-### Claims checked
-
-| § | Claim as first written | Result | Sources |
-|---|---|---|---|
-| 3.2 | Homo sapiens appears in Africa around 300,000 years ago. | supported | Hublin 2017, Richter 2017, Schlebusch 2017 |
-| 3.2 | The "cognitive revolution" is the name some researchers (Harari being the most popular) give … | narrowed | Mcbrearty and Brooks 2000, Harari 2011, Bouzouggar 2007 |
-| 3.2 | The evidence: a sudden flowering of art, decorative ornament, more refined tools, long-distance trade … | corrected | Mcbrearty and Brooks 2000, Bouzouggar 2007, Henshilwood 2002 |
-| 3.2 | Genetic mutation affecting language and abstract reasoning, possibly involving the FOXP2 gene or related … | corrected | Krause 2007, Atkinson 2018 |
-| 3.1 | The human lineage split from the chimpanzee lineage roughly 6 to 7 million years … | disputed, kept | Patterson 2006 |
-| 3.1 | Interbred with anatomically modern humans when our ancestors moved into their territory. | supported | Green 2010 |
-| 3.3 | For most of the 60,000 years between the cognitive revolution and agriculture, humans lived … | narrowed | Hill 2011, Dunbar 1992, Lindenfors 2021, Easter 2021 |
-| 3.3 | Some surviving hunter-gatherer groups average around 20 hours of subsistence work per week, though … | refined | Sahlins 1972 |
-| 3.3 | Adults who survived to 15 often lived into their 50s or 60s. | refined | Gurven and Kaplan 2007 |
-| 3.3 | Estimates suggest 10 to 20 percent of male deaths from violence in some hunter-gatherer … | narrowed | Bowles 2009, Fry and Soderberg 2013 |
-| 3.3 | Relatively egalitarian within bands. | refined | Boehm 1999, Graeber and Wengrow 2021, Morris 2022 |
-| 3.3 | The strict "man hunter, woman gatherer" framing has been somewhat revised by recent research … | supported | Anderson 2023 |
-| 3.2 | crossed when population density and connectivity reached a point where innovations could be retained … | supported | Henrich 2016, Henrich (talk) n.d. |
-| 3.4 | Sometime around 12,000 years ago, in several places independently (the Fertile Crescent, the Yellow … | refined | Larson 2014 |
-| 3.4 | Agriculture supports far higher population densities than foraging. | supported | Bocquet-Appel 2011 |
-| 3.4 | Some people end up controlling the surplus, the land, or the labor. | refined | Kohler 2017, Scott 2017, Morris 2022, Graeber and Wengrow 2021 |
-| 3.4 | Early farmers were measurably worse off than their hunter-gatherer ancestors and contemporaries: shorter, more … | narrowed | Mummert 2011, Diamond 1987, Wood et al. 1992, Easter 2021 |
-| 3.4 | Jared Diamond called agriculture "the worst mistake in the history of the human race." | supported | Diamond 1987 |
-| 3.4 | Writing was invented independently at least three or four times (Sumerian cuneiform around 3,200 … | supported | Britannica n.d., Magazine n.d. |
-| 3.6 | Karl Jaspers called this the Axial Age. | supported | Jaspers 1953, Britannica n.d. |
-| 3.8 | The Black Death, peaking in the 1340s, killed roughly a third of Europe's population … | corrected | Benedictow 2005 |
-| 3.10 | Two world wars in the 20th century killed perhaps 80 million people and reshaped … | corrected | Britannica n.d. |
-| 3.11 | The global population went from roughly 1.6 billion in 1900 to about 6 billion … | supported | UN figures, via Wikipedia |
-| 3.11 | Antibiotics, vaccines, sanitation, and public health raised life expectancy in industrialized countries from around … | narrowed | Data n.d., MMWR 1999, Data 2026 |
-| 3.9 | Smith publishes The Wealth of Nations (1776), founding modern economics. | supported | Smith 1776 |
 
 ### Books
 

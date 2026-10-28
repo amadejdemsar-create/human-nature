@@ -9,7 +9,7 @@ source: synthesis (Darwin, Hamilton, Trivers, Sapolsky, Pinker, Damasio, MacLean
 created: 2026-05-16
 pages: null
 pages_read: null
-checked: 2026-10-28
+updated: 2026-10-28
 ---
 
 # 02 The Hardware: Body, Brain, and the 3.5 Billion Years Behind Them
@@ -210,45 +210,6 @@ Practical translations:
 ---
 
 ## Sources
-
-**Status:** synthesis written 16. 5. 2026, each load-bearing claim checked against the sources below on 28. 10. 2026. Re-check by 28. 10. 2027.
-
-### Claims checked
-
-| § | Claim as first written | Result | Sources |
-|---|---|---|---|
-| 2.1 | Life appeared roughly 3.5 to 3.8 billion years ago in the form of single-celled … | supported | Dodd 2017 |
-| 2.1 | Multicellular life 600 million years ago | refined | Albani 2010 |
-| 2.1 | Human lineage splits from chimpanzee lineage 6 to 7 million years ago | disputed, kept | Patterson 2006 |
-| 2.1 | Genus Homo appears 2.5 million years ago | refined | Villmoare 2015 |
-| 2.1 | Homo sapiens appears 300,000 years ago | supported | Hublin 2017 |
-| 2.1 | Behavioral modernity (clear cognitive sophistication) 70,000 to 100,000 years ago | corrected | Mcbrearty and Brooks 2000 |
-| 2.1 | You share a substantial fraction of your genome with bacteria, an even larger fraction … | corrected | Chimpanzee Sequencing and Analysis Consortium 2005 |
-| 2.3 | the underlying point is true: the brain was built in evolutionary layers, with newer … | corrected | Cesario 2020 |
-| 2.8 | The brain is built in layers. Older limbic systems handle emotion and quick reaction. | corrected | Cesario 2020 |
-| 2.3 | This is the layer that generates emotional reactions: fear, anger, attraction, disgust, joy. | corrected | Rolls 2015, Cesario 2020 |
-| 2.3 | the limbic system has more wiring projecting up into the cortex (the reasoning layer) … | corrected | LeDoux 2000, Pessoa 2008 |
-| 2.3 | It is the last brain region to fully mature, with myelination not complete until … | narrowed | Sawyer 2018, Somerville 2016 |
-| 2.3 | Decision fatigue is real. | corrected | Danziger 2011, Weinshall-Margel and Shapard 2011, Glöckner 2016, Kahneman 2011 |
-| 2.3 | Willpower depletion is real. | corrected | Hagger 2016, Vohs 2021, Kahneman 2011 |
-| Applied: Business | The decision fatigue effect is real. | corrected | Danziger 2011, Weinshall-Margel and Shapard 2011, Glöckner 2016 |
-| Applied: Self | Willpower depletes. | corrected | Hagger 2016, Vohs 2021 |
-| 2.4 | The body evolved to crave calorie-dense foods (sugar, fat, salt), store fat aggressively, and … | narrowed | Speakman 2008, van Tulleken 2023, Pontzer 2012 |
-| 2.4 | Hunter-gatherers walked or ran several kilometers daily. | corrected | Raichlen 2017, Easter 2021 |
-| 2.4 | Artificial light at night disrupts melatonin, which disrupts sleep, which disrupts almost everything else. | supported | Chang 2015, Walker 2017 |
-| 2.4 | In modern hygienic environments (especially in childhood), the immune system can become miscalibrated, increasing … | narrowed | Bloomfield 2006 |
-| 2.4 | Hunter-gatherer bands were roughly 30 to 50 people, with broader connection to maybe 150. | refined | Lindenfors 2021, Easter 2021 |
-| 2.5 | Status drops are one of the most reliable predictors of depression and immune dysfunction. | narrowed | Sapolsky 2005 |
-| 2.5 | Even children, and even capuchin monkeys, react to unfair distributions. | refined | Brosnan and Waal 2003, Fehr 2008 |
-| 2.5 | Generalized in humans to moral disgust (the same brain regions activate when we contemplate … | corrected | Chapman 2009, Landy and Goodwin 2015 |
-| 2.7 | Anticipation of reward, motivation to pursue, learning from prediction errors. Spikes before the reward, … | refined | Schultz 1997, Lieberman and Long 2018, Berridge and Robinson 1998 |
-| 2.7 | the popular "dopamine is the pleasure chemical" framing is more wrong than right | supported | Berridge and Robinson 1998, Lieberman and Long 2018 |
-| 2.7 | Low in depression, but the mechanism is far from "serotonin = happiness." | narrowed | Moncrieff 2022, Bartova 2023, Jacobsen 2023 |
-| 2.7 | Also increases hostility toward out-groups. | narrowed | Dreu 2010, Nave 2015 |
-| 2.6 | are roughly 40 to 60 percent heritable in standard estimates. | disputed, kept | Vukasović and Bratko 2015, Polderman 2015 |
-| 2.6 | Cognitive ability is in a similar range. | corrected | Plomin and Deary 2015 |
-| Applied: Self | If you are introverted, you can build social skills, you cannot become extraverted. | refined | Hudson and Fraley 2015, Roberts 2006 |
-| 2.2 | Your appendix is a relic. | narrowed | Bollinger 2007 |
 
 ### Books
 

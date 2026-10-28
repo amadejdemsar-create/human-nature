@@ -9,7 +9,7 @@ created: 2026-05-16
 pages: null
 pages_read: null
 status: living-document
-checked: 2026-10-28
+updated: 2026-10-28
 ---
 
 # Human Nature From First Principles
@@ -60,7 +60,7 @@ That paragraph is true at every scale: an individual life, a company, an empire.
 
 ## Source quality note
 
-The guide was written 16. 5. 2026 as a synthesis. On 28. 10. 2026 each load-bearing claim was checked against books and research, corrections were applied, and the sources are listed at the end of each chapter.
+The books and research behind each chapter are listed at the end of that chapter.
 
 Major intellectual lineages drawn on:
 
@@ -106,21 +106,6 @@ The rest of this document is the model.
 ---
 
 ## Sources
-
-**Status:** synthesis written 16. 5. 2026, each load-bearing claim checked against the sources below on 28. 10. 2026. Re-check by 28. 10. 2027.
-
-### Claims checked
-
-| § | Claim as first written | Result | Sources |
-|---|---|---|---|
-| thirty-second version | The body and brain you carry now were largely finalized for life as a … | corrected | Hawks 2007, Hublin 2017 |
-| thirty-second version | A cognitive leap roughly 70,000 years ago gave humans language sophisticated enough to talk … | narrowed | Mcbrearty and Brooks 2000, Krause 2007 |
-| thirty-second version | That unlocked cooperation in groups larger than the 150 or so individuals a primate … | refined | Dunbar 1992, Lindenfors 2021, Easter 2021 |
-| thirty-second version | No other species has them. | narrowed | Harari 2011, Tomasello et al. 2005 |
-| thirty-second version | For the next 60,000 years humans roamed in small bands and were relatively egalitarian … | refined | Boehm 1999, Graeber and Wengrow 2021, Hill 2011 |
-| thirty-second version | Surplus produced hierarchy, property, taxes, kings, armies, slavery, and writing. | refined | Kohler 2017, Scott 2017, Morris 2022 |
-| thirty-second version | The biology did not change. | corrected | Hawks 2007 |
-| thirty-second version | The clash between our evolved nature and our current environment produces most of what … | narrowed | Pontzer 2012, van Tulleken 2023, Easter 2021 |
 
 ### Books
 

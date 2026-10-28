@@ -9,7 +9,7 @@ source: synthesis (Harari, Lieberman, Lustig, Haidt, Hari, Sapolsky, Twenge)
 created: 2026-05-16
 pages: null
 pages_read: null
-checked: 2026-10-28
+updated: 2026-10-28
 ---
 
 # 06 The Mismatch: Evolved Nature Against Modern Environment
@@ -266,42 +266,6 @@ This is not a guarantee against serious mental illness, which often has biologic
 ---
 
 ## Sources
-
-**Status:** synthesis written 16. 5. 2026, each load-bearing claim checked against the sources below on 28. 10. 2026. Re-check by 28. 10. 2027.
-
-### Claims checked
-
-| § | Claim as first written | Result | Sources |
-|---|---|---|---|
-| 6.1 | Mismatch theory comes from evolutionary medicine and was articulated clearly by, among others, Daniel … | corrected | Lieberman 2013, Lieberman and Long 2018 |
-| 6 | Our biology was finalized for the Pleistocene environment, roughly 70,000 to 12,000 years ago. | corrected | Hawks 2007, Zuk 2013 |
-| 6.2 | Most adults in industrialized countries are now overweight or obese. | supported | OECD 2023, Lustig 2012 |
-| 6.2 | The cardiovascular system is failing in patterns that hunter-gatherer societies almost never showed. | narrowed | Kaplan et al. 2017, Raichlen 2017 |
-| 6.2 | They have no off switch for hyper-palatable food because no hyper-palatable food existed for … | narrowed | Hall et al. 2019, van Tulleken 2023, Lustig 2012 |
-| 6.2 | Restrict the food environment (do not keep ultra-processed food at home), increase fiber and … | narrowed | Lustig 2012, van Tulleken 2023, Pontzer 2012 |
-| 6.3 | Hunter-gatherers walked or ran roughly 10 kilometers per day on average. | corrected | Pontzer 2012, Raichlen 2017, Easter 2021 |
-| 6.3 | Most adults in industrialized countries sit for 8 to 12 hours per day. | corrected | Matthews et al. 2008 |
-| 6.3 | movement is a powerful antidepressant in clinical trials | refined | Noetel et al. 2024 |
-| 6.12 | Obesity, metabolic disease Food mismatch, movement mismatch | narrowed | van Tulleken 2023, Pontzer 2012, Bull et al. 2020 |
-| 6.3 | Avoid sitting for more than 30 to 60 minutes at a time. | narrowed | Bull et al. 2020, WHO 2020, Diaz 2017 |
-| 6.3 | Resistance training twice a week (the muscle system is the single biggest factor in … | narrowed | Bull et al. 2020, WHO 2020, Momma 2022, Mandsager 2018 |
-| 6.4 | Average sleep was probably 7 to 9 hours, though the exact number is debated. | corrected | Yetish et al. 2015, Walker 2017, Bikman 2020 |
-| 6.4 | Chronic partial sleep deprivation is the norm. | corrected | Liu et al. 2016, Walker 2017, Guzey 2019 |
-| 6.4 | Most adults can recover several points of cognitive performance, mood, and physical health with … | narrowed | Scott 2021 |
-| 6.5 | Small bands of 30 to 50 people, with broader tribal networks of perhaps 150. | corrected | Hill 2011, Lindenfors 2021 |
-| 6.5 | Chronic mild stress from being among strangers. | refined | Lederbogen et al. 2011 |
-| 6.6 | Variable reinforcement schedules in social media and short-form video produce behavior patterns identical to … | corrected | Lieberman and Long 2018, Panova and Carbonell 2018 |
-| 6.7 | The "Instagram effect" on adolescent mental health is documented. | narrowed | Orben and Przybylski 2019, Haidt 2024 |
-| 6.12 | Most of what looks like modern mental health crisis can be decomposed into specific … | narrowed | Zuk 2013, Lieberman 2013, Hidaka 2012, Orben and Przybylski 2019, Walsh 2011 |
-| 6.8 | Chronic elevated cortisol. Immune suppression. Cardiovascular strain. | corrected | Miller et al. 2007, van der Kolk 2014 |
-| 6.8 | Physical activity is the most reliable: it signals to the body that the threat … | narrowed | van der Kolk 2014, Singh 2023 |
-| 6.9 | Humans evolved with meaning as a background condition, not a project. Take it away … | narrowed | Frankl 1946 |
-| 6.10 | Mating dynamics under app-mediated conditions favor a small fraction of men and a small … | corrected | Bruch and Newman 2018 |
-| 6.10 | Specific patterns: women report increasing standards mismatch; men report perceived irrelevance and disengagement from … | narrowed | Pew Research Center 2023, Pew Research Center 2020 |
-| 6.11 | Dopamine system overload. Diminished reward from natural sources (books, friends, hobbies, work). Increased need … | narrowed | Lieberman and Long 2018, Lustig 2012 |
-| 6.11 | Re-sensitize the reward system through periods of low stimulation (long walks without inputs, weekly … | narrowed | Publishing 2020, Castelo 2025, Lambert 2022 |
-| Applied: Self | If you do these consistently for three months, you will feel like a different … | removed | Walsh 2011 |
-| 6.1 | Most effective interventions move the environment closer to ancestral conditions, not the body closer … | narrowed | Zuk 2013, Lieberman 2013 |
 
 ### Books
 

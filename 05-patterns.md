@@ -9,7 +9,7 @@ source: synthesis (Donald Brown, Henrich, Boehm, Turchin, Toynbee, Ibn Khaldun, 
 created: 2026-05-16
 pages: null
 pages_read: null
-checked: 2026-10-28
+updated: 2026-10-28
 ---
 
 # 05 The Universals: Patterns Across Every Human Society
@@ -224,40 +224,6 @@ The universals are not a checklist of obligations. They are a description of the
 ---
 
 ## Sources
-
-**Status:** synthesis written 16. 5. 2026, each load-bearing claim checked against the sources below on 28. 10. 2026. Re-check by 28. 10. 2027.
-
-### Claims checked
-
-| § | Claim as first written | Result | Sources |
-|---|---|---|---|
-| 5.1 | In 1991, anthropologist Donald Brown published a list of human universals. Behaviors, beliefs, and … | supported | Brown 1991, Brown et al. 2002 |
-| 5.1 | Numerals at least up to small numbers. | corrected | Brown et al. 2002, Frank 2008, Everett 2005 |
-| 5.1 | Concepts of beauty. Color terms. | narrowed | Brown et al. 2002, Everett 2005 |
-| 5.2 | No society has ever been found without supernatural beliefs of some kind. | supported | Brown et al. 2002 |
-| 5.2 | No society has ever been found without status differences. | supported | Brown et al. 2002 |
-| 5.2 | Even the most egalitarian hunter-gatherer bands have informal hierarchies of skill and respect. | corrected | Boehm 1999 |
-| 5.2 | Attempts to design fully equal societies have always produced new hierarchies, sometimes more brutal … | narrowed | Freeman 1970 |
-| 5.2 | Gender roles are universal in some form. | supported | Brown et al. 2002 |
-| 5.2 | Property is universal. | supported | Brown et al. 2002 |
-| 5.2 | The communist experiment of abolishing property failed in part because it ran against this … | removed | Abramitzky 2008 |
-| 5.2 | No human society has been found that did not have homicide, warfare, or both. | refined | Brown et al. 2002, Fry and Söderberg 2013, Gat 2015 |
-| 5.2 | Pinker's argument in The Better Angels of Our Nature is that the rate has … | refined | Pinker 2011, Cirillo and Taleb 2016 |
-| 5.2 | Every culture has narratives, myths, legends, fables. | supported | Brown et al. 2002 |
-| 5.3 | These five dimensions have been replicated across many cultures and languages. | narrowed | McCrae 2005, Gurven 2013 |
-| 5.3 | Each is roughly 40 to 60 percent heritable. | disputed, kept | Vukasović and Bratko 2015, Polderman 2015 |
-| 5.3 | Personality is largely stable from late adolescence onward. People can change at the margins. … | corrected | Roberts and DelVecchio 2000, Roberts 2006 |
-| 5.3 | The traits predict real life outcomes | supported | Roberts 2007 |
-| 5.4 | The cycle takes roughly four generations. | corrected | Ibn Khaldun 1377 |
-| 5.4 | Toynbee's "challenge and response" theory: civilizations rise when they face manageable challenges and respond … | supported | Britannica n.d. |
-| 5.4 | Peter Turchin's "secular cycles": political instability rises when elites overproduce and resources tighten, then … | supported | Turchin and Nefedov 2009 |
-| 5.4 | The Pareto distribution shows up in income, business success, scientific output, athletic performance, social … | narrowed | O'Boyle and Aguinis 2012 |
-| 5.5 | The intensity of social punishment for free-riders is one of the most cross-culturally stable … | corrected | Henrich 2006 |
-| 5.4 | the recurring waves of "the youth are degenerate" complaints (which go back at least … | corrected | Investigator 2010, Protzko and Schooler 2019 |
-| 5.6 | The corrections sometimes work and sometimes do not. The drift back toward concentration is … | refined | Scheidel 2017 |
-| Applied: Business | Most categories follow Toynbee or Khaldun shapes at smaller scale. | narrowed | Klepper 1996 |
-| Applied: Business | Founders tend to score high on openness and disagreeableness. | refined | Zhao and Seibert 2006 |
-| 5.2 | suppressing it tends to produce displaced forms (political ideology, lifestyle communities, fandoms) that perform … | removed | Atheism 2021 |
 
 ### Books
 

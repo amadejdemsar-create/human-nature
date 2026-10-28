@@ -8,7 +8,7 @@ source: synthesis
 created: 2026-05-16
 pages: null
 pages_read: null
-checked: 2026-10-28
+updated: 2026-10-28
 ---
 
 # 01 Foundation: The Question and the Method
@@ -148,25 +148,6 @@ A second takeaway: be careful with the noble savage and modern-people-are-differ
 ---
 
 ## Sources
-
-**Status:** synthesis written 16. 5. 2026, each load-bearing claim checked against the sources below on 28. 10. 2026. Re-check by 28. 10. 2027.
-
-### Claims checked
-
-| § | Claim as first written | Result | Sources |
-|---|---|---|---|
-| 1.1 | A point in a 300,000-year story (history). | supported | Hublin 2017 |
-| 1.2 | Our brains decide, then construct a reason. We then experience the reason and believe … | refined | Haidt 2001, Kahneman 2011 |
-| 1.2 | A human alone is a human in extreme distress. | refined | Baumeister and Leary 1995 |
-| 1.2 | Most species cooperate only with relatives or known reciprocal partners. Humans cooperate with strangers … | refined | Harari 2011, Henrich 2016, Fehr 2008 |
-| 1.3 | They look for faces, prefer their mother's voice | supported | Johnson 1991, DeCasper and Fifer 1980 |
-| 1.3 | react fearfully to spiders and snakes at younger ages than to cars or guns | corrected | Lobue and DeLoache 2008, Hoehl 2017 |
-| 1.3 | This was a dominant view in 20th-century social science. It is largely false. | supported | Pinker 2002, Brown et al. 2002 |
-| 1.3 | It also had homicide rates that would horrify a modern city, frequent inter-band warfare, … | refined | Keeley 1996, Bowles 2009, Fry and Söderberg 2013, Gat 2015 |
-| 1.3 | human violence has dropped enormously over the long arc of history | refined | Pinker 2011, Cirillo and Taleb 2016 |
-| 1.3 | human biology has changed only modestly in the last 10,000 years (some lactose tolerance, … | corrected | Hawks 2007 |
-| 1.3 | The deep psychology is essentially identical to that of a Bronze Age farmer or … | refined | Henrich 2010, Hawks 2007 |
-| Applied: Self | The explanation came after the decision, and the real causal factors are often invisible … | refined | Haidt 2001, Kahneman 2011 |
 
 ### Books
 

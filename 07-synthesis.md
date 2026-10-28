@@ -9,7 +9,7 @@ source: synthesis
 created: 2026-05-16
 pages: null
 pages_read: null
-checked: 2026-10-28
+updated: 2026-10-28
 ---
 
 # 07 The Model: First-Principles Synthesis
@@ -366,27 +366,6 @@ Choose the first.
 ---
 
 ## Sources
-
-**Status:** synthesis written 16. 5. 2026, each load-bearing claim checked against the sources below on 28. 10. 2026. Re-check by 28. 10. 2027.
-
-### Claims checked
-
-| § | Claim as first written | Result | Sources |
-|---|---|---|---|
-| 7.1 | finalized for hunter-gatherer life around 70,000 years ago | corrected | Hawks 2007, Hublin 2017 |
-| 7.2 | Almost every reflex you have is calibrated against that world, not this one. | narrowed | Zuk 2013, Hawks 2007 |
-| 7.2 | A large fraction of behavior, including behavior dressed up as principle, is status competition. | narrowed | Anderson et al. 2015 |
-| 7.2 | Cooperation at scale requires shared fictions. | supported | Harari 2011 |
-| 7.2 | Change the inputs and most chronic modern problems improve. | narrowed | van Tulleken 2023, Pontzer 2012, Easter 2021 |
-| 7.3 | It is more like a press secretary than a CEO. | supported | Haidt 2012, Kahneman 2011 |
-| 7.6 | The cognitive architecture (limbic system faster than cortex, mostly unconscious decisions). | corrected | Kahneman 2011 |
-| 7.6 | Average violence rates. | refined | Pinker 2011, Cirillo and Taleb 2016 |
-| 7.1 | Civilizations rise and fall in roughly cyclical patterns. | narrowed | Turchin and Nefedov 2009, Spinney 2012 |
-| 7.8 | Big Five is mostly stable. | refined | Roberts and DelVecchio 2000 |
-| 7.10 | You have roughly 4,000 weeks in an average adult life, plus or minus. | corrected | Burkeman 2021 |
-| 7.8 | Hyper-palatable food exploits your comfort drive. | refined | van Tulleken 2023 |
-| 7.8 | Algorithmic feeds exploit your status drive and your novelty drive. | narrowed | Lieberman and Long 2018, Lindström 2021, Sherman 2016, Bunzeck and Duzel 2006 |
-| 7.5 | The universals are real but narrower than people typically assume. | supported | Henrich 2010 |
 
 ### Books
 
